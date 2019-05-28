@@ -24,7 +24,7 @@ A largo plazo la pagin web ayudará a reducir la cantidad de animales doméstico
 - Permite al usuario
 ## Propuesta de valor:
 ### El usuario podra:
-Encontrar a una mascota segun su preferencia
-Acceder a campañas de esterilizacion y vacunacion en fechas estrategicas
-Registrar a su mascota y mantener y control con su vacunación 
-Permitirá al usuario registrarse a talleres con su mascota que ayudará a su cuidado y a mejorar su estilo de vida 
+Encontrar a una mascota segun su preferencia <br>
+Acceder a campañas de esterilizacion y vacunacion en fechas estrategicas <br>
+Registrar a su mascota y mantener y control con su vacunación <br>
+Permitirá al usuario registrarse a talleres con su mascota que ayudará a su cuidado y a mejorar su estilo de vida <br>
