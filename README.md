@@ -11,3 +11,5 @@ Taller de Software II - FC-PREINF03A1T
 - GianFranco Mello Loayza-1821114 
 - Rodrigo Mozo Cuba-1811348
 
+## Nombre del Producto:
+Nuestra aplicación se llamará: "TuPET"
