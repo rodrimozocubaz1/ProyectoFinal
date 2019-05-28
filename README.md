@@ -28,3 +28,5 @@ Nuestra aplicación se llamará: "TuPET"
 ## Público Objetivo:
 - Amantes de los animales dentro de la ciudad de Lima.
 - Personas que buscan servicios relacionados con los animales.
+
+## Propuesta de valor:
