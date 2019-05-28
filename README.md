@@ -21,11 +21,7 @@ A largo plazo la pagin web ayudará a reducir la cantidad de animales doméstico
 - Personas que buscan servicios relacionados con los animales.
 
 ## Propuesta de valor:
-### El usuario podra:
-- Encontrar a una mascota segun su preferencia 
-- Acceder a campañas de esterilizacion y vacunacion en fechas estrategicas 
-- Registrar a su mascota y mantener y control con su vacunación 
-- Permitirá al usuario registrarse a talleres con su mascota que ayudará a su cuidado y a mejorar su estilo de vida 
+Brindamos al usuario una aplicacion donde podrá encontrar a una mascota segun su preferencia, registrar a una mascota encontrada en las calles, acceder a campañas de esterilizacion y vacunacion en fechas estrategicas, registrar a su mascota para mantener y controlar su vacunación y finalmente, permitirá al usuario registrarse a talleres con su mascota que ayudará a su cuidado y a mejorar su estilo de vida. 
 ## Funcionalidades:
 - Se les permitirá al usuario crear una cuenta donde pueda registrar a sus mascotas .
 - Permite a los usuarios registrar las mascotas sin hogar, especificando la raza, lugar donde lo ha enontrado, color y tamaño.
