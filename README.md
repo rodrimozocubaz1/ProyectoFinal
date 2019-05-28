@@ -30,4 +30,4 @@ Nuestra aplicación se llamará: "TuPET"
 - Personas que buscan servicios relacionados con los animales.
 
 ## Principales funcionalidades:
-- 
+- Permite al usuario
