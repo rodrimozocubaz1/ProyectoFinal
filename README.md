@@ -20,11 +20,16 @@ A largo plazo la pagin web ayudará a reducir la cantidad de animales doméstico
 - Amantes de los animales dentro de la ciudad de Lima.
 - Personas que buscan servicios relacionados con los animales.
 
-## Principales funcionalidades:
-- Permite al usuario
 ## Propuesta de valor:
 ### El usuario podra:
-Encontrar a una mascota segun su preferencia <br>
-Acceder a campañas de esterilizacion y vacunacion en fechas estrategicas <br>
-Registrar a su mascota y mantener y control con su vacunación <br>
-Permitirá al usuario registrarse a talleres con su mascota que ayudará a su cuidado y a mejorar su estilo de vida <br>
+- Encontrar a una mascota segun su preferencia 
+- Acceder a campañas de esterilizacion y vacunacion en fechas estrategicas 
+- Registrar a su mascota y mantener y control con su vacunación 
+- Permitirá al usuario registrarse a talleres con su mascota que ayudará a su cuidado y a mejorar su estilo de vida 
+## Funcionalidades:
+- Se les permitirá al usuario crear una cuenta donde pueda registrar a sus mascotas .
+- Permite a los usuarios registrar las mascotas sin hogar, especificando la raza, lugar donde lo ha enontrado, color y tamaño.
+- Adopción, en este caso a los usuarios se les mostrara una tabla con la información(nombre,raza,tamaño,foto) de todas las mascotas q han  sido registradas y no tengan dueño
+- Esterelización, permite al usuario ver las distintas fechas de las campañas en las que pueda inscribir a su mascota
+- Vacunación, permite al usuario ver las distintas fechas de las campañas en las que pueda inscribir a su mascota.
+- Talleres, brinda al usuario la opcion de inscribirse en talleres sobre educación o entrenamiento a la mascota.
