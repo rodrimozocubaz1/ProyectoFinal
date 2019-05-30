@@ -1,3 +1,7 @@
+<?php 
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,10 +11,6 @@
     <title>Document</title>
 </head>
 <body>
-<<<<<<< HEAD
-    Archivo de Prueba
-=======
-    archivo de prueba
->>>>>>> 319eba666b6ef250a0907d376253e3a24c4534d8
+    
 </body>
 </html>
