@@ -7,6 +7,17 @@
     <title>Document</title>
 </head>
 <body>
-    archivo de prueba
+    <header>
+    <nav>
+        <ol>
+            <li><a href=""></a></li>
+            <li><a href="adopcion.php">Adopcion</a></li>
+            <li><a href="Talleres.php"></a></li>
+            <li><a href="Contactanos.php">Contactanos</a></A></li>   
+            <li><a href="iniciar.php">Iniciar Sesión</a></li>
+            <li><a href="registrar.php">Registrarse</a></li>        
+        </ol>    
+    </nav>
+    </header>
 </body>
 </html>
