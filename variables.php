@@ -4,6 +4,7 @@ $id_usuario="id";
 $user_usuario="usuario";
 $nom_usuario="nombres";
 $ape_usuario="apellidos";
+$email_usuario="email";
 $fecha_nac_usuario="fecha_nac";
 $pass_usuario="password";
 
