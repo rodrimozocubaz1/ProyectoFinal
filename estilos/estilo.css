@@ -11,15 +11,23 @@
     text-decoration: none;
     color:white;
 }
-ol{
-    display: flex;
-    justify-content: space-between ;
-}
-header{
+
+
+.navegacion{
+    width: 100%;
     background-color: #2175bc;
+
+
 }
 .navegacion_div{
-    width: 80%;    
+    width: 80%;  
+    display: inline;
+    justify-content: space-between ;  
+}
+.navegacion2_div{
+    width: 20%;
+    display: inline;
+    justify-content: space-between ;
 }
 body{
     background-image: url('Imagenes/perritos.jpg');
