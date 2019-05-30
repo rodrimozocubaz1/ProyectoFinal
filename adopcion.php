@@ -1,5 +1,8 @@
 <?php 
+include 'variables.php';
 
+$pdo=new PDO("mysql:host=localhost;dbname=tupet;charset=utf8","root","");
+$sql="SELECT * FROM mascotas WHERE $due_mascota = NULL ORDER BY id ASC";
 
 ?>
 <!DOCTYPE html>
