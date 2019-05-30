@@ -1,36 +1,32 @@
 .navegacion{
-    display: inline;
-    color: brown;
-    flex-wrap: nowrap;
-    flex-direction: initial;   
+  display: flex;
+  flex-wrap: nowrap;    
 
 }
+
+header{
+    background-color: #11ffa9;
+    
+}
+
 .lista{
-
     list-style: none;
-    text-decoration: none;
-    color:white;
-}
-
-
-.navegacion{
-    width: 100%;
-    background-color: #2175bc;
-
-
-}
-.navegacion_div{
-    width: 80%;  
+    text-decoration: none;    
     display: inline;
+}
+.a{
+    color: azure;
+}
+
+.navegacion1_div{
+    width:80%;    
     justify-content: space-between ;  
 }
 .navegacion2_div{
-    width: 20%;
-    display: inline;
+    width: 20%;    
     justify-content: space-between ;
 }
 body{
-    background-image: url('Imagenes/perritos.jpg');
-    
+    background-image: url('Imagenes/perritos.jpg');   
     
 }
