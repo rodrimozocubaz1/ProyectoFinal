@@ -5,10 +5,24 @@
     flex-direction: initial;   
 
 }
+.lista{
+
+    list-style: none;
+    text-decoration: none;
+    color:white;
+}
 ol{
     display: flex;
     justify-content: space-between ;
 }
+header{
+    background-color: #2175bc;
+}
 .navegacion_div{
-    width: 50%;
+    width: 80%;    
+}
+body{
+    background-image: url('Imagenes/perritos.jpg');
+    
+    
 }
