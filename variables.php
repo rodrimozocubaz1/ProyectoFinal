@@ -21,4 +21,5 @@ $id_vacunas="id";
 $nom_vacunas="nombre";
 $descripcion="descripcion";
 
+$db="tupet";
 ?>
