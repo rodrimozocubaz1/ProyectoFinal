@@ -11,9 +11,7 @@
 <?php if(isset($_GET["m"])){ 
     if($_GET["m"]=="pass"){?>
 <p style="color:red">Error. Los passwords son diferentes</p>
-<?php } if($_GET["m"]=="ok"){?>
-<p style="color:green">Usuario creado con exito</p>
-<?php }} ?>
+<?php } ?>
 
     <form action="procesar_usuario.php" method="post">
     <div>
@@ -34,7 +32,7 @@
     </div>
     <div>
         Fecha de Nacimiento:<br>
-        <input type="date" name="" id="f">
+        <input type="date" name="f" id="">
     </div>
     <div>
         Password:<br>
