@@ -8,6 +8,7 @@
     <title>Document</title>
 </head>
 <body>
+    <img src="perritos.jpg" alt="perritos">
     <?php include ('cabecera.php'); ?>
 </body>
 </html>
