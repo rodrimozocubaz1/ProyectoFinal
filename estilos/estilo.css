@@ -1,0 +1,14 @@
+.navegacion{
+    display: inline;
+    color: brown;
+    flex-wrap: nowrap;
+    flex-direction: initial;   
+
+}
+ol{
+    display: flex;
+    justify-content: space-between ;
+}
+.navegacion_div{
+    width: 50%;
+}
