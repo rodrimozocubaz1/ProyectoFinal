@@ -17,7 +17,7 @@ $tam_mascota="tamaño";
 
 $tab_vacunas="vacunas";
 $id_vacunas="id";
-$nom_vacunas="nombre"
-$descripcion="descripcion"
+$nom_vacunas="nombre";
+$descripcion="descripcion";
 
 ?>
