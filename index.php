@@ -7,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    Archivo Prueba
+    Archivo de Prueba
 </body>
 </html>
