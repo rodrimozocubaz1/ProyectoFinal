@@ -7,10 +7,17 @@
     <title>Document</title>
 </head>
 <body>
-<<<<<<< HEAD
-    Archivo de Prueba
-=======
-    archivo de prueba
->>>>>>> 319eba666b6ef250a0907d376253e3a24c4534d8
+    <header>
+    <nav>
+        <ol>
+            <li><a href=""></a></li>
+            <li><a href="adopcion.php">Adopcion</a></li>
+            <li><a href="Talleres.php"></a></li>
+            <li><a href="Contactanos.php">Contactanos</a></A></li>   
+            <li><a href="iniciar.php">Iniciar Sesión</a></li>
+            <li><a href="registrar.php">Registrarse</a></li>        
+        </ol>    
+    </nav>
+    </header>
 </body>
 </html>
