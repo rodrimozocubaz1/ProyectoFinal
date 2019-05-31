@@ -1,6 +1,7 @@
 .navegacion{
   display: flex;
   flex-wrap: nowrap;    
+  margin: auto 0 auto 0;
 
 }
 
@@ -25,8 +26,4 @@ header{
 .navegacion2_div{
     width: 20%;    
     justify-content: space-between ;
-}
-body{
-    background-image: url('Imagenes/perritos.jpg');   
-    
 }
