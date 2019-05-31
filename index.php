@@ -1,4 +1,4 @@
-<?php include ('variables.php'); ?>
+<?php include ('Funciones/variables.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +10,6 @@
 </head>
 <body>
     
-    <?php include ('cabecera.php'); ?>
+    <?php include ('Funciones/cabecera.php'); ?>
 </body>
 </html>
