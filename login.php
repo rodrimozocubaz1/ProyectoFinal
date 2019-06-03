@@ -1,10 +1,3 @@
-<?php 
-include 'variables.php';
-
-$pdo=new PDO("mysql:host=localhost;dbname=tupet;charset=utf8","root","");
-$sql="SELECT * FROM mascotas WHERE $due_mascota = NULL ORDER BY id ASC";
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,8 +5,13 @@ $sql="SELECT * FROM mascotas WHERE $due_mascota = NULL ORDER BY id ASC";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="estilos/estilos2.css">
 </head>
 <body>
+    <form action="post">
+
+
     
+    </form>
 </body>
 </html>
