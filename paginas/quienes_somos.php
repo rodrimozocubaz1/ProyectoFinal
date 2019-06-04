@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../estilos/estilonosotros.css">
 </head>
 <body>
-    <?php include('../Funciones/cabecera.php') ?>
+    <?php include('../Funciones/cabecera_resto.php') ?>
     <h1>¿Qué es TuPET?</h1>
     <p>TuPet es una asociación sin fines de lucro dedicada a la promoción de la adopción, el trabajo de concientización sobre la realidad de los perros en estado de abandono y la ejecución de proyectos que contribuyan a la construcción de un mundo mejor para todos los perros.</p>
     <h2>Mision</h2>
@@ -16,5 +16,5 @@
     <h3>Vision</h3>
     <p>Construir un mundo donde todos los perros sean felices.</p>
 </body>
-    <?php include ('../Funciones/footer.php'); ?>
+    <?php include ('../Funciones/footer_resto.php'); ?>
 </html>
