@@ -1,6 +1,10 @@
+*{
+    padding: 0;
+    margin:0;
+}
 html{
     font-size: 62.5%; /* cambiamos a 10px como base para hacer la conversion a rems más facil*/
-}
+    }
 body{
     font-family: 'Indie Flower', cursive;
     font-size: 1.7rem;
