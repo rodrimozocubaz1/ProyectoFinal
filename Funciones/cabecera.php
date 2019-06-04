@@ -1,7 +1,7 @@
 <header class="site-header inicio">    
     <div class='contenedor contenido-header'>
         <div class="barra">
-            <a href="../index.php"><img src="Imagenes/Logo.png" alt="Logo" width="200px"></a>
+            <a href="index.php"><img src="Imagenes/Logo.png" alt="Logo" width="200px"></a>
             <nav class="navegacion">                    
                 <a href="paginas/adopcion.php" class="a">Adopcion</a>
                 <a href="paginas/talleres.php" class="a">Talleres</a>

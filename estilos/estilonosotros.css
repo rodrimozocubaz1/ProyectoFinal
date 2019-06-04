@@ -1,18 +1,36 @@
+*{
+    padding: 0;
+    margin:0;
+}
 html{
     font-size: 62.5%; /* cambiamos a 10px como base para hacer la conversion a rems más facil*/
 }
 body{
     font-family: 'Indie Flower', cursive;
     font-size: 1.7rem;
+    
 }
-h1{
-    font-size:3.8rem;
+body h1,h2,h3 {
+    display:flex;
+    font-size :3.8rem;
+    justify-content: center;
+}
+p{
+    display:flex;
+    max-width: 70rem;
+    justify-content: center;
+    margin: 0 auto 0 auto;
+    
+}
+.contenido{
+    
+    margin: 0 auto;
 }
 
 .contenedor{
     max-width: 100%;    
-    margin: 0 auto;
-
+    
+    background-color: #0b7ef8;
     
 }
 
@@ -21,7 +39,8 @@ h1{
     justify-content: space-between; /*posicionar los elementos al final. alinea horizontalmente*/
     padding-top: 3rem;    
     align-items: center; /*alinea verticalmente*/
-    background-color: #0b7ef8;
+    
+    margin:0 auto;
     
 }
 
