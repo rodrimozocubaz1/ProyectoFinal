@@ -10,9 +10,6 @@
                 <a href="../paginas/login.php" class="a">Iniciar Sesion</a>
                 <a href="../paginas/registarse.php" class="a">Registrarse</a>                    
             </nav>   
-        </div>        
-        <div>    
-            <h1>Centro de Adopción de Mascotas</h1>   
-        </div> 
+        </div>         
     </div>       
 </header>

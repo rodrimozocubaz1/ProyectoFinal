@@ -4,9 +4,23 @@ html{
 body{
     font-family: 'Indie Flower', cursive;
     font-size: 1.7rem;
+    
 }
-h1{
-    font-size:3.8rem;
+body h1,h2,h3 {
+    display:flex;
+    font-size :3.8rem;
+    justify-content: center;
+}
+p{
+    display:flex;
+    max-width: 70rem;
+    justify-content: center;
+    margin: 0 auto 0 auto;
+    
+}
+.contenido{
+    
+    margin: 0 auto;
 }
 
 .contenedor{
