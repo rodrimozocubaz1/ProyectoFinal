@@ -7,17 +7,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>TuPET</title>
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="estilos/estilo.css">
+    <link rel="stylesheet" href="estilos/estiloprincipal.css">
 </head>
 <body>
     
     <?php include ('Funciones/cabecera.php'); ?>
 
-    <main>
-        
-    </main>
     
 
+    <main>
+        <p>Hola somos de la usil</p>
+    </main>
+    
+    <?php include ('Funciones/footer.php');  ?>
     
 </body>
 </html>
