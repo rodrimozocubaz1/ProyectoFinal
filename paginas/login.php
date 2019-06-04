@@ -8,10 +8,20 @@
     <link rel="stylesheet" href="estilos/estilos2.css">
 </head>
 <body>
-    <form action="post">
-
-
-    
+    <form action="" method="post">
+        <div>
+        Nombre de usuario:<br>
+        <input type="text" name="u" id="" placeholder="nombre de usuario" autofocus required>
+        </div>
+        <div>
+        Contraseña:<br>
+        <input type="text" name="c" id="" placeholder="contraseña" required>
+        </div>
+        <div>
+        <input type="checkbox" name="s" id="">
+        No cerrar sesión:<br>
+        </div>
     </form>
+
 </body>
 </html>
