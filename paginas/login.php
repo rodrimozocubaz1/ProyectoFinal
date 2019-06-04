@@ -15,6 +15,12 @@ include ("../Funciones/cabecera_resto.php");
 
 </head>
 <body>
+<?php if(isset($_GET["m"])){ 
+    if($_GET["m"]=="pass"){?>
+<p style="color:red">El passwords es incorrecto</p>
+<?php } if($_GET["m"]=="user"){?>
+<p style="color:red">El nombre de usuario es incorrecto</p>
+<?php }} ?>
     <form action="" method="post">
         <div>
         Nombre de usuario:<br>
@@ -25,7 +31,7 @@ include ("../Funciones/cabecera_resto.php");
         <input type="text" name="p" id="" placeholder="contraseña" required>
         </div>
         <div>
-        <input type="checkbox" name="s" id="">
+        <input type="checkbox" name="s" id="" value="1">
         Mantener sesión iniciada
         </div>
         <button type="submit">Entrar</button>
