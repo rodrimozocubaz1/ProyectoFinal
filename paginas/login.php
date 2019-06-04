@@ -19,6 +19,7 @@ include ("../Funciones/variables.php");
 <?php } if($_GET["m"]=="user"){?>
 <p style="color:red">El nombre de usuario es incorrecto</p>
 <?php }} ?>
+
     <form action="" method="post">
         <div>
         Nombre de usuario:<br>
