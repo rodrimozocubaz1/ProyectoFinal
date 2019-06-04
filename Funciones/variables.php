@@ -5,6 +5,7 @@ $user_usuario="usuario";
 $nom_usuario="nombres";
 $ape_usuario="apellidos";
 $email_usuario="email";
+$dir_usuario="direccion";
 $fecha_nac_usuario="fecha_nac";
 $pass_usuario="password";
 
@@ -21,5 +22,5 @@ $id_vacunas="id";
 $nom_vacunas="nombre";
 $descripcion="descripcion";
 
-$db="tupet";
+$dbname="tupet";
 ?>
