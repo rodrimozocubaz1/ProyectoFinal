@@ -7,8 +7,8 @@
                 <a href="paginas/talleres.php" class="a">Talleres</a>
                 <a href="paginas/contactar.php" class="a">Contactanos</a>
                 <a href="paginas/quienes_somos.php" class="a">Nosotros</a>               
-                <a href="Funciones/login.php" class="a">Iniciar Sesion</a>
-                <a href="Funciones/registarse.php" class="a">Registrarse</a>                    
+                <a href="paginas/login.php" class="a">Iniciar Sesion</a>
+                <a href="paginas/registrarse.php" class="a">Registrarse</a>                    
             </nav>   
         </div>        
         <div>    
