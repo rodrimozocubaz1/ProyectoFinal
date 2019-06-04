@@ -1,20 +1,29 @@
 <?php
 if($_SERVER['REQUEST_METHOD']!='POST'){
-    header("Location: index.php");
+    header("Location: ../index.php");
+    exit();
 }
 include('variables.php');
 #leer datos de post
-$usuario=$_POST["u"];
-$nombre=$_POST["n"];
-$apellido=$_POST["a"];
-$email=$_POST["e"];
-$fecha_nac=$_POST["f"];
-$password=$_POST["p1"];
-$password2=$_POST["p2"];
+$usuario=$_POST["usuario"];
+$nombre=$_POST["nombres"];
+$apellido=$_POST["apellidos"];
+$email=$_POST["email"];
+$fecha_nac=$_POST["fecha_nac"];
+$password=$_POST["password1"];
+$password2=$_POST["password2"];
+$direccion=$_POST["direccion"];
+
 
 if($password!=$password2){
-    header("Location: registrarse.php?m=pass");
+    header("Location: registrarse.php?p=pass");
     exit();
+}
+$U_repetido=$pdo->query("SELECT * FROM $db WHERE usuario='$usuario'");
+$fila=$U_repetido->fetch();
+if(count($fila)==0){
+
+
 }
 
 $pass=md5($password);
@@ -22,7 +31,7 @@ $pass=md5($password);
 $pdo=new PDO("mysql:host=localhost;dbname='$db';charset=utf8","root","");
 
 #construir comando
-$sql="INSERT INTO $tab_usuario VALUES (NULL,'$usuario', $nombre, $apellido, $fecha_nac '$email', '$pass')";
+$sql="INSERT INTO $tab_usuario VALUES (NULL,'$usuario', '$nombre', '$apellido', '$email', '$fecha_nac','$direccion', '$password')";
 
 #ejecutar comando
 $pdo->query($sql);
