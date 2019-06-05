@@ -1,4 +1,7 @@
-<?php include ('Funciones/variables.php'); ?>
+<?php 
+include ('Funciones/variables.php'); 
+include ('Funciones/verificar_sesion.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

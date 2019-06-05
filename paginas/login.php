@@ -1,7 +1,11 @@
 <?php 
 include ("../Funciones/variables.php");
-
-
+session_start();
+#te regresa a index si es que ya iniciaste sesion con tu usuario
+if(isset($_SESSION["usuario"])){
+    header("Location: ../index.php");
+    exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,10 +17,11 @@ include ("../Funciones/variables.php");
     <link rel="stylesheet" href="../estilos/estilonosotros.css">
 </head>
 <body>
+<?php include ("../Funciones/cabecera_resto.php"); ?>
 <?php if(isset($_GET["m"])){ 
-    if($_GET["m"]=="pass"){?>
-<p style="color:red">El passwords es incorrecto</p>
-<?php } if($_GET["m"]=="user"){?>
+    if($_GET["m"]=="p"){?>
+<p style="color:red">El password es incorrecto</p>
+<?php } if($_GET["m"]=="u"){?>
 <p style="color:red">El nombre de usuario es incorrecto</p>
 <?php }} ?>
 
