@@ -1,5 +1,5 @@
 <?php
-include ("../Funciones/variables.php");
+
 #inicia sesion
 session_start();
 

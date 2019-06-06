@@ -26,27 +26,27 @@ $fila=$resultado->fetchAll();
 
 #verifica si hay un usuario con el nombre de usuario proporcionado
 if(count($fila)==1){
-    if($fila[$pass_usuario]==md5($password)){
+    if($fila[0][$pass_usuario]==md5($password)){
         #login satisfactorio
         #se inicia la sesion y se guardan las variables usuario, nombres, apellidos y email
         session_start();
-        $_SESSION["usuario"]=$fila[$user_usuario];
-        $_SESSION["nombres"]=$fila[$nom_usuario];
-        $_SESSION["apellidos"]=$fila[$ape_usuario];
-        $_SESSION["email"]=$fila[$email_usuario];
+        $_SESSION["usuario"]=$fila[0][$user_usuario];
+        $_SESSION["nombres"]=$fila[0][$nom_usuario];
+        $_SESSION["apellidos"]=$fila[0][$ape_usuario];
+        $_SESSION["email"]=$fila[0][$email_usuario];
 
         #entra si desea crear la cookie
         if(isset($_POST["s"]) && $_POST["s"]=="1"){
             #verificar que no exista la cookie
             if(!isset($_COOKIE["id"])){
                 #crear cookie id con valor del nombre de usuario proporcionado
-                setcookie("id",$fila[$id_usuario], time()+60*60*24*30);
+                setcookie("id",$fila[0][$id_usuario], time()+60*60*24*30);
             }
         }
         #regresar a index
         header("Location: ../index.php");
     }else{
-        #si el pass es diferente regresar a logincon m=p
+        #si el pass es diferente regresar a login con m=p
         header("Location: ../paginas/login.php?m=p");
         exit();
     }
