@@ -20,23 +20,27 @@ if($password!=$password2){
     exit();
 }
 $U_repetido=$pdo->query("SELECT * FROM $db WHERE usuario='$usuario'");
-$fila=$U_repetido->fetch();
+$fila=$U_repetido->fetchAll();
 if(count($fila)==0){
+    $pass=md5($password);
+    #instanciar pdo
+    $pdo=new PDO("mysql:host=localhost;dbname='$dbname';charset=utf8","root","");
 
+    #construir comando
+    $sql="INSERT INTO $tab_usuario VALUES (NULL,'$usuario', '$nombre', '$apellido', '$email', '$fecha_nac','$direccion', '$password')";
+
+    #ejecutar comando
+    $pdo->query($sql);
+
+    #redirigir
+    header("Location: ./login.php");
 
 }
+else{
+    header("Location: registrarse.php?u=repetido");
+    exit();
+}
 
-$pass=md5($password);
-#instanciar pdo
-$pdo=new PDO("mysql:host=localhost;dbname='$db';charset=utf8","root","");
 
-#construir comando
-$sql="INSERT INTO $tab_usuario VALUES (NULL,'$usuario', '$nombre', '$apellido', '$email', '$fecha_nac','$direccion', '$password')";
-
-#ejecutar comando
-$pdo->query($sql);
-
-#redirigir
-header("Location: index.php");
 
 ?>
