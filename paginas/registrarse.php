@@ -7,9 +7,10 @@ include ("../Funciones/variables.php");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<<<<<<< HEAD
-    <title>Document</title>
+    <title>Registrarse</title>
+    <link rel="stylesheet" href="../estilos/estilonosotros.css">
 </head>
+<?php include ("../Funciones/cabecera_resto.php"); ?>
 <body>
     <?php
     if(isset($GET["p"])){
@@ -19,6 +20,13 @@ include ("../Funciones/variables.php");
 
     }
     ?>
+    <?php
+    if(isset($GET["u"])){
+        if($GET["U"]=="repetido"){?>
+            <p style="color:red">Nickname ya existente</p>
+
+        }
+    }
     <form action="procesar_insertar.php" method="post">
 
         <div>
@@ -59,17 +67,11 @@ include ("../Funciones/variables.php");
         </div>
 
     </form>
-=======
-    <title>Registrarse</title>
-    <link rel="stylesheet" href="../estilos/estilonosotros.css">
-</head>
-<body>
-    <?php include ("../Funciones/cabecera_resto.php"); ?>
-   
-
     <?php 
     include ("../Funciones/footer_resto.php");
     ?>
->>>>>>> 785a21d983ad52a09afaf10dc679122d265370ea
+
+    
 </body>
+    
 </html>
