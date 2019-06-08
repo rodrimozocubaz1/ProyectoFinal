@@ -28,8 +28,9 @@ $fila=$resultado->fetchAll();
 if(count($fila)==1){
     if($fila[0][$pass_usuario]==md5($password)){
         #login satisfactorio
-        #se inicia la sesion y se guardan las variables usuario, nombres, apellidos y email
+        #se inicia la sesion y se guardan las variables id, usuario, nombres, apellidos y email
         session_start();
+        $_SESSION["id"]=$fila[0][$id_usuario];
         $_SESSION["usuario"]=$fila[0][$user_usuario];
         $_SESSION["nombres"]=$fila[0][$nom_usuario];
         $_SESSION["apellidos"]=$fila[0][$ape_usuario];
@@ -39,7 +40,7 @@ if(count($fila)==1){
         if(isset($_POST["s"]) && $_POST["s"]=="1"){
             #verificar que no exista la cookie
             if(!isset($_COOKIE["id"])){
-                #crear cookie id con valor del nombre de usuario proporcionado
+                #crear cookie id con valor del nombre de usuario proporcionado, duracion un mes
                 setcookie("id",$fila[0][$id_usuario], time()+60*60*24*30);
             }
         }

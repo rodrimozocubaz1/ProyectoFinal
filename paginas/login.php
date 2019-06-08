@@ -2,7 +2,7 @@
 include ("../Funciones/variables.php");
 session_start();
 #te regresa a index si es que ya iniciaste sesion con tu usuario
-if(isset($_SESSION["usuario"])){
+if(isset($_SESSION["id"])){
     header("Location: ../index.php");
     exit();
 }
@@ -18,6 +18,7 @@ if(isset($_SESSION["usuario"])){
 </head>
 <body>
 <?php include ("../Funciones/cabecera_resto.php"); ?>
+<h2>Ingresar con tu cuenta</h2>
 <?php if(isset($_GET["m"])){ 
     if($_GET["m"]=="p"){?>
 <p style="color:red">El password es incorrecto</p>
