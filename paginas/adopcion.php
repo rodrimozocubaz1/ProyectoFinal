@@ -40,10 +40,6 @@ $sql="SELECT * FROM '$tab_mascota' WHERE '$due_mascota' = NULL ORDER BY id DESC"
             <?php
             }
     ?>
-    <tr>
-    <td colspan=3></td>
-    <td><a href="operaciones.php?m=i">Agregar</a></td>
-    </tr>
 </table>
 </form>
 
