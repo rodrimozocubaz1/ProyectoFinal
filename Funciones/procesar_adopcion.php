@@ -12,20 +12,17 @@ if($_SERVER['REQUEST_METHOD']!='POST' || isset($_POST["b"])){
 $pdo=new PDO("mysql:host=localhost;dbname=$dbname;charset=utf8","root","");
 #buscar mascotas sin dueño
 $sql="SELECT * FROM $tab_mascota WHERE $due_mascota IS NULL ORDER BY id DESC";
-
+$counter=0;
 foreach ($pdo->query($sql) as $fila) {
-    
+    #verificar si existe el checkbox de la mascota esta activada
     if(isset($_POST[$fila[$id_mascota]])){
+        #agregar como dueño de dicha mascota el nombre de usuario 
         $id_m=$fila[$id_mascota];
         $user=$_SESSION["usuario"];
         $sql2="UPDATE $tab_mascota SET $due_mascota = '$user' WHERE $id_mascota='$id_m'";
+        $counter++;
     }
-
 }
-#leer datos de post
-$usuario=$_POST["u"];
-$password=$_POST["p"];
-$regresar=$_POST["b"];
-
+header("Location: ../paginas/adopcion.php?a=$counter");
 
 ?>

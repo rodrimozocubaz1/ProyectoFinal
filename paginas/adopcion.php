@@ -22,11 +22,11 @@ $sql="SELECT * FROM $tab_mascota WHERE $due_mascota IS NULL ORDER BY id DESC";
 
 <h2>Mascotas para Adopción</h2>
 <?php if(isset($_GET["a"])){ 
-    if($_GET["a"]==0){ ?>
+    if($_GET["a"]=="0"){ ?>
 <p style="color:blue">No seleccionó mascotas para adoptar</p>
 <?php } else { ?>
-<p style="color:green">Usted adoptó a <?php echo $_GET["a"] mascota(s)?></p>
-<p>Nos contactaremos con usted muy pronto para seguir el trámite</p>
+<p style="color:green">Muchas gracias. Usted adoptó a <?php echo $_GET["a"] ?> mascota(s)</p>
+<p>Nos contactaremos con usted muy pronto para seguir con el proceso</p>
 <?php }} ?>
 
 <form action="../Funciones/procesar_adopcion.php" method="post">
