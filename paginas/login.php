@@ -20,9 +20,9 @@ if(isset($_SESSION["id"])){
 <?php include ("../Funciones/cabecera_resto.php"); ?>
 <h2>Ingresar con tu cuenta</h2>
 <?php if(isset($_GET["m"])){ 
-    if($_GET["m"]=="p"){?>
+    if($_GET["m"]=="p"){ ?>
 <p style="color:red">El password es incorrecto</p>
-<?php } if($_GET["m"]=="u"){?>
+<?php } if($_GET["m"]=="u"){ ?>
 <p style="color:red">El nombre de usuario es incorrecto</p>
 <?php }} ?>
 

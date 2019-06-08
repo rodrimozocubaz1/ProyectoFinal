@@ -1,7 +1,7 @@
 <?php include ('../Funciones/variables.php');
 
 $pdo=new PDO("mysql:host=localhost;dbname=tupet;charset=utf8","root","");
-$sql="SELECT * FROM mascotas WHERE $due_mascota = NULL ORDER BY id ASC";
+$sql="SELECT * FROM '$tab_mascota' WHERE '$due_mascota' = NULL ORDER BY id DESC";
 
 ?>
 <!DOCTYPE html>
@@ -16,9 +16,37 @@ $sql="SELECT * FROM mascotas WHERE $due_mascota = NULL ORDER BY id ASC";
 <body>
 <?php include ('../Funciones/cabecera_resto.php') ?>
 
+<form action="" method="post">
+<h2>Mascotas para Adopción</h2>
+<button type="submit">Adoptar Seleccionados</button>
+<button type="submit" name="b">Regresar a inicio</button>
+<table>
+    <tr>
+        <td></td>
+        <td>Nombre</td>
+        <td>Raza</td>
+        <td>Tamaño</td>
+        <td>Color</td>
+    </tr>
+    <?php
+        foreach($pdo->query($sql) as $fila){ ?>
+            <tr>
+                <td><input type="checkbox" name=<?php echo $fila[$id_mascota] ?> id="" value="1"></td>
+                <td><?php echo $fila[$nom_mascota] ?></td>
+                <td><?php echo $fila[$raza_mascota] ?></td>
+                <td><?php echo $fila[$tam_mascota] ?></td>
+                <td><?php echo $fila[$color_mascota] ?></td>
+            </tr>
+            <?php
+            }
+    ?>
+    <tr>
+    <td colspan=3></td>
+    <td><a href="operaciones.php?m=i">Agregar</a></td>
+    </tr>
+</table>
+</form>
 
 <?php include ('../Funciones/footer_resto.php') ?>
-    
-
 </body>
 </html>
