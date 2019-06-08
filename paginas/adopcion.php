@@ -1,7 +1,11 @@
-<?php include ('../Funciones/variables.php');
+<?php 
+include_once ('../Funciones/variables.php');
+include_once ('../Funciones/verificar_session.php');
 
-$pdo=new PDO("mysql:host=localhost;dbname=tupet;charset=utf8","root","");
-$sql="SELECT * FROM '$tab_mascota' WHERE '$due_mascota' = NULL ORDER BY id DESC";
+#crear pdo
+$pdo=new PDO("mysql:host=localhost;dbname=$dbname;charset=utf8","root","");
+#buscar  mascotas sin dueño
+$sql="SELECT * FROM $tab_mascota WHERE $due_mascota IS NULL ORDER BY id DESC";
 
 ?>
 <!DOCTYPE html>
@@ -16,8 +20,16 @@ $sql="SELECT * FROM '$tab_mascota' WHERE '$due_mascota' = NULL ORDER BY id DESC"
 <body>
 <?php include ('../Funciones/cabecera_resto.php') ?>
 
-<form action="" method="post">
 <h2>Mascotas para Adopción</h2>
+<?php if(isset($_GET["a"])){ 
+    if($_GET["a"]==0){ ?>
+<p style="color:blue">No seleccionó mascotas para adoptar</p>
+<?php } else { ?>
+<p style="color:green">Usted adoptó a <?php echo $_GET["a"] mascota(s)?></p>
+<p>Nos contactaremos con usted muy pronto para seguir el trámite</p>
+<?php }} ?>
+
+<form action="../Funciones/procesar_adopcion.php" method="post">
 <button type="submit">Adoptar Seleccionados</button>
 <button type="submit" name="b">Regresar a inicio</button>
 <table>

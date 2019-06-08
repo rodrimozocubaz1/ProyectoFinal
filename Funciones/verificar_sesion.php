@@ -11,12 +11,12 @@ if(!isset($_SESSION["id"])){
         $id=$_COOKIE["id"];
         
         #crear pdo
-        $pdo=new PDO("mysql:host=localhost;dbname='$dbname';charset=utf8","root","");
+        $pdo=new PDO("mysql:host=localhost;dbname=$dbname;charset=utf8","root","");
     
         #construir comando
-        $sql="SELECT '$user_usuario', '$nom_usuario', '$ape_usuario', '$email_usuario' 
-        FROM '$tab_usuario' 
-        WHERE '$id_usuario' = '$id'";
+        $sql="SELECT $user_usuario, $nom_usuario, $ape_usuario, $email_usuario 
+        FROM $tab_usuario 
+        WHERE $id_usuario = '$id'";
     
         #ejecutar comando
         $resultado=$pdo->query($sql);

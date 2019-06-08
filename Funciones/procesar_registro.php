@@ -3,7 +3,7 @@ if($_SERVER['REQUEST_METHOD']!='POST'){
     header("Location: ../index.php");
     exit();
 }
-include('variables.php');
+include ('variables.php');
 #leer datos de post
 $usuario=$_POST["usuario"];
 $nombre=$_POST["nombres"];
@@ -19,12 +19,14 @@ if($password!=$password2){
     header("Location: registrarse.php?p=pass");
     exit();
 }
-$U_repetido=$pdo->query("SELECT * FROM $db WHERE usuario='$usuario'");
+
+#instanciar pdo
+$pdo=new PDO("mysql:host=localhost;dbname=$dbname;charset=utf8","root","");
+
+$U_repetido=$pdo->query("SELECT * FROM $tab_usuario WHERE $user_usuario='$usuario'");
 $fila=$U_repetido->fetchAll();
 if(count($fila)==0){
     $pass=md5($password);
-    #instanciar pdo
-    $pdo=new PDO("mysql:host=localhost;dbname='$dbname';charset=utf8","root","");
 
     #construir comando
     $sql="INSERT INTO $tab_usuario VALUES (NULL,'$usuario', '$nombre', '$apellido', '$email', '$fecha_nac','$direccion', '$password')";
@@ -33,7 +35,7 @@ if(count($fila)==0){
     $pdo->query($sql);
 
     #redirigir
-    header("Location: ./login.php");
+    header("Location: ../login.php");
 
 }
 else{

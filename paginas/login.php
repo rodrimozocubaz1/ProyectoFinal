@@ -1,5 +1,6 @@
 <?php 
 include ("../Funciones/variables.php");
+
 session_start();
 #te regresa a index si es que ya iniciaste sesion con tu usuario
 if(isset($_SESSION["id"])){

@@ -1,5 +1,5 @@
 <?php
-include ("../Funciones/variables.php");
+include_once ("variables.php");
 
 #verifica se se entro por post o si se entro con boton regresar
 if($_SERVER['REQUEST_METHOD']!='POST' || isset($_POST["b"])){
@@ -8,7 +8,7 @@ if($_SERVER['REQUEST_METHOD']!='POST' || isset($_POST["b"])){
 }
 
 #crear pdo
-$pdo=new PDO("mysql:host=localhost;dbname='$dbname';charset=utf8","root","");
+$pdo=new PDO("mysql:host=localhost;dbname=$dbname;charset=utf8","root","");
 
 #leer datos de post
 $usuario=$_POST["u"];
@@ -16,9 +16,9 @@ $password=$_POST["p"];
 $regresar=$_POST["b"];
 
 #construir comando
-$sql="SELECT '$id_usuario','$user_usuario','$pass_usuario', '$nom_usuario', '$ape_usuario', '$email_usuario' 
-FROM '$tab_usuario' 
-WHERE '$user_usuario' = '$usuario'";
+$sql="SELECT $id_usuario,$user_usuario,$pass_usuario,$nom_usuario,$ape_usuario,$email_usuario 
+FROM $tab_usuario 
+WHERE $user_usuario = '$usuario'";
 
 #ejecutar comando
 $resultado=$pdo->query($sql);
