@@ -1,4 +1,4 @@
-<?php 
+ <?php 
 include ("../Funciones/variables.php");
 ?>
 <!DOCTYPE html>
@@ -10,23 +10,23 @@ include ("../Funciones/variables.php");
     <title>Registrarse</title>
     <link rel="stylesheet" href="../estilos/estilonosotros.css">
 </head>
-<?php include ("../Funciones/cabecera_resto.php"); ?>
+
 <body>
+    <?php include ("../Funciones/cabecera_resto.php"); ?>
     <?php
     if(isset($GET["p"])){
-        if($GET["P"]=="pass"){?>
+        if($GET["P"]=="pass"){ ?>
             <p style="color:red">Error en el password</p>
-        <?php}
+        <?php }
 
-    }
-    ?>
+    } ?>
     <?php
     if(isset($GET["u"])){
-        if($GET["U"]=="repetido"){?>
+        if($GET["U"]=="repetido"){ ?>
             <p style="color:red">Nickname ya existente</p>
 
-        }
-    }
+        <?php }
+    } ?>
     <form action="procesar_insertar.php" method="post">
 
         <div>
@@ -67,11 +67,6 @@ include ("../Funciones/variables.php");
         </div>
 
     </form>
-    <?php 
-    include ("../Funciones/footer_resto.php");
-    ?>
-
-    
-</body>
-    
+    <?php include ("../Funciones/footer_resto.php"); ?>
+</body>     
 </html>
