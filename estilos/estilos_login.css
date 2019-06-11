@@ -25,3 +25,11 @@ body{
 .ultimo{
     margin-bottom:30px;
 }
+button{
+    background-color:#1E8AD9;
+    border: 0;
+    padding: 10px;
+    font-size: 1.8rem;
+    font-family: 'Indie Flower', cursive;
+    color:white;
+}

@@ -15,8 +15,9 @@ if(isset($_SESSION["id"])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Inicio de Sesión</title>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../estilos/estilonosotros.css">
-    <link rel="stylesheet" href="../estilos/estilos_login.css">
+    <link rel="stylesheet" href="../estilos/estilos_login.css">    
 </head>
 <body>
 <?php include ("../Funciones/cabecera_resto.php"); ?>
@@ -27,7 +28,7 @@ if(isset($_SESSION["id"])){
 <?php } if($_GET["m"]=="u"){ ?>
 <p style="color:red">El nombre de usuario es incorrecto</p>
 <?php }} ?>
-    <form action="" method="post">
+    <form action="../Funciones/procesar_login.php" method="post">
     <div class="conten">  
         <div class="Formulario">
         <h2>Ingresar con tu cuenta</h2>
