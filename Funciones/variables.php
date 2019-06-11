@@ -22,5 +22,18 @@ $id_vacunas="id";
 $nom_vacunas="nombre";
 $descripcion="descripcion";
 
+$tab_talleres="talleres";
+$id_taller="id";
+$nom_taller="nombre";
+$fecha_taller="fecha";
+$hora_taller="hora";
+$capacidad_taller="capacidad";
+$desc_taller="descripcion";
+
+$tab_taller_usuario="taller_usuario";
+$id_taller_usuario="id";
+$taller="id_taller";
+$usuario="id_usuario";
+
 $dbname="tupet";
 ?>

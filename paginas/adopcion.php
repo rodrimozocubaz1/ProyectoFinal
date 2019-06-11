@@ -5,7 +5,7 @@ include_once ('../Funciones/verificar_session.php');
 #crear pdo
 $pdo=new PDO("mysql:host=localhost;dbname=$dbname;charset=utf8","root","");
 #buscar  mascotas sin dueño
-$sql="SELECT * FROM $tab_mascota WHERE $due_mascota IS NULL ORDER BY id DESC";
+$sql="SELECT * FROM $tab_mascota WHERE $due_mascota IS NULL ORDER BY $id_mascota DESC";
 
 ?>
 <!DOCTYPE html>
