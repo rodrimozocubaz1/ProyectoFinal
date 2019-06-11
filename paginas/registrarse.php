@@ -9,10 +9,12 @@ include ("../Funciones/variables.php");
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Registrarse</title>
     <link rel="stylesheet" href="../estilos/estilonosotros.css">
+    <link rel="stylesheet" href="../estilos/registrarse.css">
 </head>
 
 <body>
     <?php include ("../Funciones/cabecera_resto.php"); ?>
+    <div class="contenido">
     <?php
     if(isset($GET["p"])){
         if($GET["P"]=="pass"){ ?>
@@ -31,35 +33,35 @@ include ("../Funciones/variables.php");
 
         <div>
             Nickname:<br>
-            <input id="usuario" type="text" name="usuario" required>
+            <input id="usuario" type="text" placeholder="&#128272; Usuario" name="usuario" required>
         </div>
         <div>
             Nombres: <br>
-            <input id="nombres" type="text" name="nombres" required>
+            <input id="nombres" type="text" placeholder="&#128272; Nombres" name="nombres" required>
         </div>
         <div>
             Apellidos:<br>
-            <input id="apellidos" type="text" name="apelidos" required>
+            <input id="apellidos" type="text" placeholder="&#128272; Apellidos" name="apelidos" required>
         </div>
         <div>
             Email:<br>
-            <input id="email" type="email" name="email" required><br>               
+            <input id="email" type="email" placeholder="&#128272; Email" name="email" required>              
         </div>
         <div>
             Fecha de Nacimiento:<br>
-            <input id="fecha_nac" type="date" name="fecha_nac" required><br>               
+            <input id="fecha_nac" type="date" placeholder="&#128272; Nacimiento" name="fecha_nac" required>             
         </div>
         <div>
             Direccion:<br>
-            <input id="direccion" type="text" name="direccion" required><br>               
+            <input id="direccion" type="text" placeholder="&#128272; Direccion" name="direccion" required>               
         </div>
         <div>
             Contraseña:<br>
-            <input id="password1" type="password" name="password1" required><br>               
+            <input id="password1" type="password" placeholder="&#128272; Contraseña" name="password1" required>               
         </div>
         <div>
             Confirmar contraseña:<br>
-            <input id="password2" type="password" name="password2"><br>               
+            <input id="password2" type="password" placeholder="&#128272; Confirmar Contraseña" name="password2"><br>               
         </div>
         <div>
             <input type="submit" value="Registrarse">
@@ -67,6 +69,8 @@ include ("../Funciones/variables.php");
         </div>
 
     </form>
-    <?php include ("../Funciones/footer_resto.php"); ?>
-</body>     
+</div>
+<?php include ("../Funciones/footer_resto.php"); ?>  
+</body>  
+ 
 </html>

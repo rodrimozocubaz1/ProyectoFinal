@@ -1,5 +1,5 @@
 <?php
-$tab_usuario="usuario";
+$tab_usuario="usuarios";
 $id_usuario="id";
 $user_usuario="usuario";
 $nom_usuario="nombres";
