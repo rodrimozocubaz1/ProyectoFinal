@@ -20,6 +20,7 @@ if(isset($_GET["t"])){
     }else{
         $nom=$filas[0][$nom_taller];
         
+        #revisar que usuarios estan inscritos al taller
         $sql2="SELECT * FROM $tab_taller_usuario WHERE $taller='$id'";
         #ejecutar comando2
         $resultado2=$pdo->query($sql2);
@@ -54,9 +55,9 @@ if(isset($_GET["t"])){
     <?php include ('../Funciones/cabecera_resto.php') ?>
     <h2><?php echo $nom ?></h2>
 
-    <form action="info_taller.php" method="post">
-    <input type="hidden" name="id_u">
-    <input type="hidden" name="id_t">
+    <form action="procesar_talleres.php" method="post">
+    <input type="hidden" name="id_u" value=<?php echo $id_usuario_sesion?>> <!-- enviar el id del usuario  -->
+    <input type="hidden" name="id_t" value=<?php echo $id ?>> <!-- enviar el id del taller  -->
     <?php 
     #boton inscribirse si hay cupos y si no esta inscrito
     if($disponible > 0 || count($filas3)==0){ ?>
