@@ -22,7 +22,7 @@ if(isset($_POST["b"])){
     #boton inscribirse. Inscribir usuario al taller
     
     #insertar el id del taller y del usuario en la tabla taller_usuario
-    $sql="INSERT INTO $tab_taller_usuario ($taller, $usuario) VALUES ('$id_t', '$id_u')";
+    $sql="INSERT INTO $tab_taller_usuario ($idTal_taller_usuario, $idUsu_taller_usuario) VALUES ('$id_t', '$id_u')";
 
     #ejecutar comando
     $pdo->query($sql);
@@ -35,7 +35,7 @@ if(isset($_POST["b"])){
     #boton cancelar. Retirar al usuario del taller.
     
     #borrar la fila donde se encuentre el id_taller con el id_usuario
-    $sql="DELETE $tab_taller_usuario WHERE $taller='$id_t' AND $usuario='$id_u')";
+    $sql="DELETE $tab_taller_usuario WHERE $idTal_taller_usuario='$id_t' AND $idUsu_taller_usuario='$id_u')";
 
     #ejecutar comando
     $pdo->query($sql);
