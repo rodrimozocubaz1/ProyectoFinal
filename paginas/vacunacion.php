@@ -4,8 +4,8 @@ include_once ("../Funciones/verificar_sesion.php");
 
 #crear pdo
 $pdo=new PDO("mysql:host=localhost;dbname=$dbname;charset=utf8","root","");
-#lista de todos talleres 
-$sql="SELECT * FROM $tab_talleres ORDER BY $id_taller DESC";
+#Lista de vacunacion 
+$sql="SELECT * FROM $tab_vacunas ORDER BY $id_vacunas DESC";
 
 ?>
 <!DOCTYPE html>
@@ -14,24 +14,26 @@ $sql="SELECT * FROM $tab_talleres ORDER BY $id_taller DESC";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Talleres</title>
+    <title>Campañas de Vacunación</title>
     <link rel="stylesheet" href="../estilos/estilonosotros.css">    
 </head>
 <body>
     <?php include ('../Funciones/cabecera_resto.php') ?>
-    <h2>Lista de Talleres</h2>
+    <h2>Lista de Campañas de Vacunación</h2>
     <table>
     <tr>
-        <td>Nombre</td>
+        <td>Vacuna</td>
         <td>Descripción</td>
+        <td>Capacidad</td>
         <td>Más Info</td>
     </tr>
     <?php
         foreach($pdo->query($sql) as $fila){ ?>
             <tr>
-                <td><?php echo $fila[$nom_taller] ?></td>
-                <td><?php echo $fila[$desc_taller] ?></td>
-                <td><a href="info_taller.php?t=<?php echo $fila[$id_taller] ?>">Ver más</a></td>
+                <td><?php echo $fila[$nom_vacunas] ?></td>
+                <td><?php echo $fila[$desc_vacunas] ?></td>
+                <td><?php echo $fila[$capacidad_vacunas] ?></td>
+                <td><a href="info_taller.php?v=<?php echo $fila[$id_vacunas] ?>">Ver más</a></td>
             </tr>
             <?php
             }

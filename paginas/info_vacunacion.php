@@ -4,40 +4,40 @@ include_once ("../Funciones/verificar_sesion.php");
 
 #crear pdo
 $pdo=new PDO("mysql:host=localhost;dbname=$dbname;charset=utf8","root","");
-if(isset($_GET["t"])){
-    $id=$_GET["t"];    
-    #info del taller seleccionado
-    $sql="SELECT * FROM $tab_talleres WHERE $id_taller='$id'";
+if(isset($_GET["v"])){
+    $id=$_GET["v"];    
+    #info de la vacunacion seleccionada
+    $sql="SELECT * FROM $tab_vacunas WHERE $id_vacunas='$id'";
 
     #ejecutar comando
     $resultado=$pdo->query($sql);
     $filas=$resultado->fetchAll();
     
-    #entra al if si escribieron un id de taller q no existe
+    #entra al if si escribieron un id de vacunacion q no existe
     if (count($filas)==0) {
-        header("Location: ../paginas/talleres.php");
+        header("Location: ../paginas/vacunacion.php");
         exit();    
     }else{
-        $nom=$filas[0][$nom_taller];
+        $nom=$filas[0][$nom_vacunas];
         
-        #revisar que usuarios estan inscritos al taller
-        $sql2="SELECT * FROM $tab_taller_usuario WHERE $idTal_taller_usuario='$id'";
+        #revisar que usuarios estan inscritos en la vacunacion
+        $sql2="SELECT * FROM $tab_vacuna_usuario WHERE $idVac_vacuna_usuario='$id'";
         #ejecutar comando2
         $resultado2=$pdo->query($sql2);
         $filas2=$resultado2->fetchAll();
 
         #cuantos cupos disponibles quedan
-        $disponible=intval($filas[0][$capacidad_taller])-count($filas2);
+        $disponible=intval($filas[0][$capacidad_vacunas])-count($filas2);
 
-        #verificar si el usuario ya esta inscrito en el taller
+        #verificar si el usuario ya esta inscrito en la vacunacion
         $id_usuario_sesion=$_SESSION["id"];
-        $sql3="SELECT * FROM $tab_taller_usuario WHERE $idTal_taller_usuario='$id' AND $idUsu_taller_usuario='$id_usuario_sesion'";
+        $sql3="SELECT * FROM $tab_vacuna_usuario WHERE $idVac_vacuna_usuario='$id' AND $id_Usu_vacunausuario='$id_usuario_sesion'";
         #ejecutar comando3
         $resultado3=$pdo->query($sql3);
         $filas3=$resultado3->fetchAll();
     }
 }else{
-    header("Location: ../paginas/talleres.php");
+    header("Location: ../paginas/vacunas.php");
     exit();
 }
 
@@ -55,9 +55,9 @@ if(isset($_GET["t"])){
     <?php include ('../Funciones/cabecera_resto.php') ?>
     <h2><?php echo $nom ?></h2>
 
-    <form action="procesar_talleres.php" method="post">
+    <form action="procesar_vacunacion.php" method="post">
     <input type="hidden" name="id_u" value=<?php echo $id_usuario_sesion?>> <!-- enviar el id del usuario  -->
-    <input type="hidden" name="id_t" value=<?php echo $id ?>> <!-- enviar el id del taller  -->
+    <input type="hidden" name="id_v" value=<?php echo $id ?>> <!-- enviar el id de la vacunacion  -->
     <?php 
     #boton inscribirse si hay cupos y si no esta inscrito
     if($disponible > 0 || count($filas3)==0){ ?>
@@ -68,23 +68,23 @@ if(isset($_GET["t"])){
     if(count($filas3)==1){ ?>
     <button type="submit" name="c">Cancelar Inscripción</button>
     <?php } ?>
-    <button type="submit" name="b">Regresar a Lista Talleres</button>
+    <button type="submit" name="b">Regresar a Lista Vacunación</button>
     </form>
     <div>
-    <p>Nombre Taller:</p>
+    <p>Nombre Vacuna:</p>
     <p><?php echo $nom ?></p>
     </div>
     <div>
     <p>Descripción:</p>
-    <p><?php echo $filas[0][$desc_taller] ?></p>
+    <p><?php echo $filas[0][$desc_vacunas] ?></p>
     </div>
     <div>
     <p>Fecha:</p>
-    <p><?php echo $filas[0][$fecha_taller] ?></p>
+    <p><?php echo $filas[0][$fecha_vacunas] ?></p>
     </div>
     <div>
     <p>Hora:</p>
-    <p><?php echo $filas[0][$hora_taller] ?></p>
+    <p><?php echo $filas[0][$hora_vacunas] ?></p>
     </div>
     <div>
     <p>Cupos restantes:</p>
@@ -99,7 +99,7 @@ if(isset($_GET["t"])){
     </tr>
     <?php
         for ($i=0; $i < count($filas2); $i++) { 
-            $u=$filas2[$i][$idUsu_taller_usuario];
+            $u=$filas2[$i][$idUsu_vacuna_usuario];
             $sql4="SELECT $nom_usuario, $ape_usuario FROM $tab_usuario WHERE $id_usuario='$u'";
             $r=pdo->query($sql4);
             $f=r->fetch();

@@ -1,0 +1,35 @@
+body{
+    height: 100vh;
+}
+.conten{
+    max-width: 100%;
+    background-image: url(../Imagenes/perrito_registro.jpg);
+    height: 100vh;
+    background-position: center center;
+    background-size: cover;
+}
+.Formulario{
+    display:flex;
+    
+    margin: 0 auto;
+    flex-direction: column;    
+    align-items: center;
+    max-height: 100%;
+    
+}
+
+.elemento{
+    margin-top: 20px;
+}
+
+.ultimo{
+    margin-bottom:30px;
+}
+button{
+    background-color:#1E8AD9;
+    border: 0;
+    padding: 10px;
+    font-size: 1.8rem;
+    font-family: 'Indie Flower', cursive;
+    color:white;
+}
