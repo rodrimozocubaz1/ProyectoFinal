@@ -20,7 +20,10 @@ $tam_mascota="tamaño";
 $tab_vacunas="vacunas";
 $id_vacunas="id";
 $nom_vacunas="nombre";
-$descripcion="descripcion";
+$fecha_vacunas="fecha";
+$hora_vacunas="hora";
+$capacidad_vacunas="capacidad";
+$desc_vacunas="descripcion";
 
 $tab_talleres="talleres";
 $id_taller="id";
