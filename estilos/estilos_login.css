@@ -1,0 +1,27 @@
+body{
+    height: 100vh;
+}
+.conten{
+    max-width: 100%;
+    background-image: url(../Imagenes/perrito_registro.jpg);
+    height: 100vh;
+    background-position: center center;
+    background-size: cover;
+}
+.Formulario{
+    display:flex;
+    
+    margin: 0 auto;
+    flex-direction: column;    
+    align-items: center;
+    max-height: 100%;
+    
+}
+
+.elemento{
+    margin-top: 20px;
+}
+
+.ultimo{
+    margin-bottom:30px;
+}

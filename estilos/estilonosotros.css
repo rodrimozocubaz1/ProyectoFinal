@@ -9,11 +9,13 @@ body{
     font-family: 'Indie Flower', cursive;
     font-size: 1.7rem;
     
+    
 }
 body h1,h2,h3 {
     display:flex;
     font-size :3.8rem;
     justify-content: center;
+    
 }
 p{
     display:flex;

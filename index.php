@@ -19,7 +19,24 @@ include ('Funciones/verificar_sesion.php');
     
 
     <main>
-        <p>Hola somos de la usil</p>
+        <div>
+            <h2>Como ayudamos a las mascotas perdidas</h2>
+            <p>Nos encargamos de buscar un hogar a los animales domésticos que han sido encontrados perdidos o 
+            abandonados, dandoles asi una oportunidad para poder recibir amor.</p>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
     </main>
     
     <?php include ('Funciones/footer.php');  ?>
