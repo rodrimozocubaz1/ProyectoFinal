@@ -35,7 +35,7 @@ if (($nom_foto == !NULL) && ($_FILES['foto']['size'] <= 200000))
 else 
 {
    //si existe la variable pero se pasa del tamaño permitido
-   if($nombre_img == !NULL) echo "La foto es demasiado grande "; 
+   if($nom_foto == !NULL) echo "La foto es demasiado grande "; 
 }
 
 #instanciar pdo

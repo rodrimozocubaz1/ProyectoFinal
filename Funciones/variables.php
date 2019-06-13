@@ -12,10 +12,10 @@ $pass_usuario="contrasena";
 $tab_mascota="mascotas";
 $id_mascota="id";
 $nom_mascota="nombre";
-$due_mascota="dueño";
+$due_mascota="dueno";
 $raza_mascota="raza";
 $color_mascota="color";
-$tam_mascota="tamaño";
+$tam_mascota="tamano";
 $foto_mascota="foto";
 
 $tab_vacunas="vacunas";
