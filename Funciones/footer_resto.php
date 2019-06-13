@@ -1,4 +1,4 @@
-<footer>  
+<footer class="footer">  
         <div class="contenedor contenedor-footer"> 
             <nav class="navegacion nav_footer">                    
                 <a href="adopcion.php" class="a">Adopcion</a>

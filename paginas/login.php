@@ -22,35 +22,36 @@ if(isset($_SESSION["id"])){
 <body>
 <?php include ("../Funciones/cabecera_resto.php"); ?>
 
-<?php if(isset($_GET["m"])){ 
-    if($_GET["m"]=="p"){ ?>
-<p style="color:red">El password es incorrecto</p>
-<?php } if($_GET["m"]=="u"){ ?>
-<p style="color:red">El nombre de usuario es incorrecto</p>
-<?php }} ?>
-    <form action="../Funciones/procesar_login.php" method="post">
-    <div class="conten">  
-        <div class="Formulario">
-        <h2>Ingresar con tu cuenta</h2>
-                <div class="elemento">
-                Nombre de usuario:<br>
-                <input type="text" name="u" id="" placeholder="nombre de usuario" autofocus required>
+<div class="contenido">
+    <?php if(isset($_GET["m"])){ 
+        if($_GET["m"]=="p"){ ?>
+    <p style="color:red">El password es incorrecto</p>
+    <?php } if($_GET["m"]=="u"){ ?>
+    <p style="color:red">El nombre de usuario es incorrecto</p>
+    <?php }} ?>
+        <form action="../Funciones/procesar_login.php" method="post">
+        
+            <div class="Formulario">
+            <h2>Ingresar con tu cuenta</h2>
+                    <div class="elemento">
+                    Nombre de usuario:<br>
+                    <input type="text" name="u" id="" placeholder="nombre de usuario" autofocus required>
+                    </div>
+                    <div class="elemento">
+                    Contraseña:<br>
+                    <input type="text" name="p" id="" placeholder="contraseña" required>
+                    </div>
+                    <div class="elemento iniciada">
+                    <input type="checkbox" name="s" id="" value="1">
+                    Mantener sesión iniciada
+                    </div>
+                    <button type="submit" class="elemento">Entrar</button>
+                    <button type="submit" name="b" class="elemento ultimo">Regresar a inicio</button>
                 </div>
-                <div class="elemento">
-                Contraseña:<br>
-                <input type="text" name="p" id="" placeholder="contraseña" required>
-                </div>
-                <div class="elemento">
-                <input type="checkbox" name="s" id="" value="1">
-                Mantener sesión iniciada
-                </div>
-                <button type="submit" class="elemento">Entrar</button>
-                <button type="submit" name="b" class="elemento ultimo">Regresar a inicio</button>
-            </div>
-            </div> 
+                
 
-        </form>
-    
+            </form>
+    </div>
 <?php 
 include ("../Funciones/footer_resto.php");
 ?>

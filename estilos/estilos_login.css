@@ -1,20 +1,21 @@
 body{
     height: 100vh;
+    font-size: 3rem;
 }
-.conten{
+.contenido{
     max-width: 100%;
-    background-image: url(../Imagenes/perrito_registro.jpg);
+    background-image: url('../Imagenes/perrito_login.jpg');
     height: 100vh;
     background-position: center center;
     background-size: cover;
+       
 }
 .Formulario{
-    display:flex;
-    
+    display:flex;    
     margin: 0 auto;
     flex-direction: column;    
     align-items: center;
-    max-height: 100%;
+    
     
 }
 
@@ -32,4 +33,24 @@ button{
     font-size: 1.8rem;
     font-family: 'Indie Flower', cursive;
     color:white;
+    border-radius: 20px;   
+    
 }
+.elemento{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.elemento.iniciada{
+    display:inline;
+}
+
+input{
+    border-radius: 8px;
+    background-color: #a8c2d5;
+    border:0;
+    padding: 10px;    
+    font-family: 'Indie Flower', cursive;
+}
+
+
