@@ -65,6 +65,7 @@ p{
     width:100%;    
     position: fixed;
     }
+
 .contenedor-footer{
     display:flex;
     background-color: black;
@@ -73,10 +74,22 @@ p{
     align-items: center;    
     justify-content: center;   
     left: 0;
-    bottom: 0;      
+    bottom: 0;    
+      
 }
 
 .nav_footer a{
     margin:6rem;
 }
  
+/*Solo afecta al contenido de la pagina nosotros*/
+.contenido_somos{
+    padding-top: 13rem;
+    padding-bottom: 9rem;
+    height: 100vh;
+}
+
+.contenido_contactar{
+    padding-top:13rem;
+    padding-bottom: 9rem;
+}

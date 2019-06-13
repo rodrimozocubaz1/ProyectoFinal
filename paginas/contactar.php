@@ -9,16 +9,16 @@
 </head>
 <body>
     <?php include ('../Funciones/cabecera_resto.php') ?>
-
-    <main>
-        <h1>Telefono</h1>
-        <p>957632841</p>
-        <h2>Direccion</h2>
-        <p>Googlemaps</p>
-        <h3>Facebook</h3>
-        <p><a href="https://es-la.facebook.com/"></a></p>
-    <main>
-    
+    <div class="contenido_contactar">
+        <main>
+            <h1>Telefono</h1>
+            <p>957632841</p>
+            <h2>Direccion</h2>
+            <p>Googlemaps</p>
+            <h3>Facebook</h3>
+            <p><a href="https://es-la.facebook.com/"></a></p>
+        <main>
+    </div>    
     <?php include ('../Funciones/footer_resto.php') ?>
 </body>
 </html>

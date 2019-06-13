@@ -6,12 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Nosotros</title>
     <link rel="stylesheet" href="../estilos/estilonosotros.css">
+    
 </head>
 <body>
     
     <?php include('../Funciones/cabecera_resto.php') ?>
     <main>
-        <div class="contenido">
+        <div class="contenido_somos">
             <h1>¿Qué es TuPET?</h1>
             <p>TuPet es una asociación sin fines de lucro dedicada a la promoción de la adopción, el trabajo de concientización sobre la realidad de los perros en estado de abandono y la ejecución de proyectos que contribuyan a la construcción de un mundo mejor para todos los perros.</p>
             <h2>Mision</h2>
