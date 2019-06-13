@@ -17,21 +17,22 @@ include ("../Funciones/variables.php");
 <body>
     <?php include ("../Funciones/cabecera_resto.php"); ?>
     <div class="contenido">
+    
+    <form action="../Funciones/procesar_registro.php" method="post">
     <?php
-    if(isset($GET["p"])){
-        if($GET["p"]=="pass"){ ?>
+    if(isset($_GET["p"])){
+        if($_GET["p"]=="pass"){ ?>
             <p style="color:red">Error en el password</p>
         <?php }
 
     } ?>
     <?php
-    if(isset($GET["u"])){
-        if($GET["u"]=="repetido"){ ?>
-            <p style="color:red">Nickname ya existente</p>
+    if(isset($_GET["u"])){
+        if($_GET["u"]=="repetido"){ ?>
+            <p style="color:red; font-size: 3rem;">Nickname ya existente</p>
 
         <?php }
     } ?>
-    <form action="../Funciones/procesar_registro.php" method="post">
 
         <div>
             Nickname:<br>
