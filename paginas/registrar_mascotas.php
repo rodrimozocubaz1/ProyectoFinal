@@ -44,8 +44,8 @@ include ("../Funciones/variables.php");
             <input id="tamaño" type="text" placeholder="&#128272; Tamaño" name="tamaño" required>             
         </div>
         <div>
-            Foto:<br>
-            <input id="tamaño" type="file" placeholder="&#128272; Tamaño" name="foto" required>             
+            <label for="foto">Foto:</label> 
+            <input id="foto" name="foto" size="30" type="file" />
         </div>
 
     </form>
