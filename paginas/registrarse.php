@@ -18,15 +18,15 @@ include ("../Funciones/variables.php");
     <?php include ("../Funciones/cabecera_resto.php"); ?>
     <div class="contenido">
     <?php
-    if(isset($GET["p"])){
-        if($GET["p"]=="pass"){ ?>
+    if(isset($_GET["p"])){
+        if($_GET["p"]=="pass"){ ?>
             <p style="color:red">Error en el password</p>
         <?php }
 
     } ?>
     <?php
-    if(isset($GET["u"])){
-        if($GET["u"]=="repetido"){ ?>
+    if(isset($_GET["u"])){
+        if($_GET["u"]=="repetido"){ ?>
             <p style="color:red">Nickname ya existente</p>
 
         <?php }
