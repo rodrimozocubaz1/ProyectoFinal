@@ -16,6 +16,7 @@ $due_mascota="dueño";
 $raza_mascota="raza";
 $color_mascota="color";
 $tam_mascota="tamaño";
+$foto_mascota="foto";
 
 $tab_vacunas="vacunas";
 $id_vacunas="id";
