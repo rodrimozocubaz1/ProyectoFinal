@@ -1,6 +1,6 @@
 <?php 
 include ("../Funciones/variables.php");
-include ("../Funciones/verificar_sesion.php")
+include ("../Funciones/verificar_session.php")
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,22 +16,14 @@ include ("../Funciones/verificar_sesion.php")
 <body>
     <?php include ("../Funciones/cabecera_resto.php"); ?>
     <div class="contenido">
-    <?php
-    if(isset($GET["p"])){
-        if($GET["P"]=="pass"){ ?>
-            <p style="color:red">Error en el password</p>
-        <?php }
-
-    } ?>
-    <?php
-    if(isset($GET["u"])){
-        if($GET["u"]=="repetido"){ ?>
-            <p style="color:red">Nickname ya existente</p>
-
-        <?php }
-    } ?>
     <form action="../Funciones/procesar_reportar_mascota.php" method="post">
+        <?php
+        if(isset($GET["r"])){
+            if($GET["r"]=="ok"){ ?>
+                <p style="color:green">Mascota reportada con éxito. Gracias</p>
+            <?php }
 
+        } ?>
         <div>
             Nombre: <br>
             <input id="nombre" type="text" name="nombre">
@@ -49,12 +41,8 @@ include ("../Funciones/verificar_sesion.php")
             <input id="tamano" type="text" name="tamano">             
         </div>
         <div>
-            Fecha:<br>
-            <input id="fecha" type="date" name="fecha" >
-        </div>
-        <div>
-            Foto:<br>
-            <input type="file" name="foto" id="">
+            <label for="foto">Foto:</label> 
+            <input id="foto" name="foto" size="30" type="file" />
         </div>
         <div>
             <input type="submit" value="Reportar Mascota">
