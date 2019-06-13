@@ -33,7 +33,7 @@ $sql="SELECT * FROM $tab_vacunas ORDER BY $id_vacunas DESC";
                 <td><?php echo $fila[$nom_vacunas] ?></td>
                 <td><?php echo $fila[$desc_vacunas] ?></td>
                 <td><?php echo $fila[$capacidad_vacunas] ?></td>
-                <td><a href="info_taller.php?v=<?php echo $fila[$id_vacunas] ?>">Ver más</a></td>
+                <td><a href="info_vacunacion.php?v=<?php echo $fila[$id_vacunas] ?>">Ver más</a></td>
             </tr>
             <?php
             }

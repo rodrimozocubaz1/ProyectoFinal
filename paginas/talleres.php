@@ -24,6 +24,7 @@ $sql="SELECT * FROM $tab_talleres ORDER BY $id_taller DESC";
     <tr>
         <td>Nombre</td>
         <td>Descripción</td>
+        <td>Capacidad</td>
         <td>Más Info</td>
     </tr>
     <?php
@@ -31,6 +32,7 @@ $sql="SELECT * FROM $tab_talleres ORDER BY $id_taller DESC";
             <tr>
                 <td><?php echo $fila[$nom_taller] ?></td>
                 <td><?php echo $fila[$desc_taller] ?></td>
+                <td><?php echo $fila[$capacidad_taller] ?></td>
                 <td><a href="info_taller.php?t=<?php echo $fila[$id_taller] ?>">Ver más</a></td>
             </tr>
             <?php

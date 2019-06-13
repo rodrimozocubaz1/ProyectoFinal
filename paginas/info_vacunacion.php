@@ -55,7 +55,7 @@ if(isset($_GET["v"])){
     <?php include ('../Funciones/cabecera_resto.php') ?>
     <h2><?php echo $nom ?></h2>
 
-    <form action="procesar_vacunacion.php" method="post">
+    <form action="../Funciones/procesar_vacunacion.php" method="post">
     <input type="hidden" name="id_u" value=<?php echo $id_usuario_sesion?>> <!-- enviar el id del usuario  -->
     <input type="hidden" name="id_v" value=<?php echo $id ?>> <!-- enviar el id de la vacunacion  -->
     <?php 

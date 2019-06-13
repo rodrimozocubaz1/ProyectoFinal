@@ -1,4 +1,4 @@
- <?php 
+<?php 
 include ("../Funciones/variables.php");
 ?>
 <!DOCTYPE html>
@@ -17,14 +17,14 @@ include ("../Funciones/variables.php");
     <div class="contenido">
     <?php
     if(isset($GET["p"])){
-        if($GET["P"]=="pass"){ ?>
+        if($GET["p"]=="pass"){ ?>
             <p style="color:red">Error en el password</p>
         <?php }
 
     } ?>
     <?php
     if(isset($GET["u"])){
-        if($GET["U"]=="repetido"){ ?>
+        if($GET["u"]=="repetido"){ ?>
             <p style="color:red">Nickname ya existente</p>
 
         <?php }
