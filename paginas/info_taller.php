@@ -1,6 +1,6 @@
 <?php
 include_once ("../Funciones/variables.php");
-include_once ("../Funciones/verificar_sesion.php");
+include_once ("../Funciones/verificar_session.php");
 
 #crear pdo
 $pdo=new PDO("mysql:host=localhost;dbname=$dbname;charset=utf8","root","");

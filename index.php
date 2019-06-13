@@ -1,6 +1,6 @@
 <?php 
 include ('Funciones/variables.php'); 
-include ('Funciones/verificar_sesion.php');
+include ('Funciones/verificar_session.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">

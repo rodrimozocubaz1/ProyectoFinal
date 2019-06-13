@@ -46,7 +46,7 @@ if(isset($_SESSION["id"])){
                     Mantener sesión iniciada
                     </div>
                     <button type="submit" class="elemento">Entrar</button>
-                    <button type="submit" name="b" class="elemento ultimo">Regresar a inicio</button>
+                    
                 </div>
                 
 

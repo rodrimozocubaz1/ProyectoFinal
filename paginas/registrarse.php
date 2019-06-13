@@ -70,6 +70,16 @@ include ("../Funciones/variables.php");
             <input type="submit" value="Registrarse">
             
         </div>
+        <script>
+            function myFunction() {
+            var x = document.getElementById("myNav");
+            if (x.className === "navegacion") {
+                x.className += " responsive";
+            } else {
+                x.className = "navegacion";
+            }
+            }
+            </script>
 
     </form>
 </div>

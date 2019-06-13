@@ -30,7 +30,7 @@ button{
     background-color:#1E8AD9;
     border: 0;
     padding: 10px;
-    font-size: 1.8rem;
+    font-size: 3rem;
     font-family: 'Indie Flower', cursive;
     color:white;
     border-radius: 20px;   
@@ -43,6 +43,7 @@ button{
 }
 .elemento.iniciada{
     display:inline;
+    border-radius: 8px;
 }
 
 input{
@@ -51,6 +52,8 @@ input{
     border:0;
     padding: 10px;    
     font-family: 'Indie Flower', cursive;
+    width: 15rem;
+    height: 2rem;
 }
 
 

@@ -1,6 +1,6 @@
 <?php
 include_once ("../Funciones/variables.php");
-include_once ("../Funciones/verificar_sesion.php");
+include_once ("../Funciones/verificar_session.php");
 
 #crear pdo
 $pdo=new PDO("mysql:host=localhost;dbname=$dbname;charset=utf8","root","");
@@ -19,6 +19,7 @@ $sql="SELECT * FROM $tab_talleres ORDER BY $id_taller DESC";
 </head>
 <body>
     <?php include ('../Funciones/cabecera_resto.php') ?>
+    <div class="contenido_talleres">
     <h2>Lista de Talleres</h2>
     <table>
     <tr>
@@ -39,6 +40,7 @@ $sql="SELECT * FROM $tab_talleres ORDER BY $id_taller DESC";
             }
     ?>
     </table>
+    </div>
 
     <?php include ('../Funciones/footer_resto.php') ?>
 </body>

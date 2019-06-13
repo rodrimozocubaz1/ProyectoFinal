@@ -20,40 +20,42 @@ $sql="SELECT * FROM $tab_mascota WHERE $due_mascota IS NULL ORDER BY $id_mascota
 <body>
 <?php include ('../Funciones/cabecera_resto.php') ?>
 
-<h2>Mascotas para Adopción</h2>
-<?php if(isset($_GET["a"])){ 
-    if($_GET["a"]=="0"){ ?>
-<p style="color:blue">No seleccionó mascotas para adoptar</p>
-<?php } else { ?>
-<p style="color:green">Muchas gracias. Usted adoptó a <?php echo $_GET["a"] ?> mascota(s)</p>
-<p>Nos contactaremos con usted muy pronto para seguir con el proceso</p>
-<?php }} ?>
+<div class="contenido-adopcion">
+    <h2>Mascotas para Adopción</h2>
+    <?php if(isset($_GET["a"])){ 
+        if($_GET["a"]=="0"){ ?>
+    <p style="color:blue">No seleccionó mascotas para adoptar</p>
+    <?php } else { ?>
+    <p style="color:green">Muchas gracias. Usted adoptó a <?php echo $_GET["a"] ?> mascota(s)</p>
+    <p>Nos contactaremos con usted muy pronto para seguir con el proceso</p>
+    <?php }} ?>
 
-<form action="../Funciones/procesar_adopcion.php" method="post">
-<button type="submit">Adoptar Seleccionados</button>
-<button type="submit" name="b">Regresar a inicio</button>
-<table>
-    <tr>
-        <td></td>
-        <td>Nombre</td>
-        <td>Raza</td>
-        <td>Tamaño</td>
-        <td>Color</td>
-    </tr>
-    <?php
-        foreach($pdo->query($sql) as $fila){ ?>
+    <form action="../Funciones/procesar_adopcion.php" method="post">
+    <button type="submit">Adoptar Seleccionados</button>
+    <button type="submit" name="b">Regresar a inicio</button>
+        <table>
             <tr>
-                <td><input type="checkbox" name=<?php echo $fila[$id_mascota] ?> id="" value="1"></td>
-                <td><?php echo $fila[$nom_mascota] ?></td>
-                <td><?php echo $fila[$raza_mascota] ?></td>
-                <td><?php echo $fila[$tam_mascota] ?></td>
-                <td><?php echo $fila[$color_mascota] ?></td>
+                <td></td>
+                <td>Nombre</td>
+                <td>Raza</td>
+                <td>Tamaño</td>
+                <td>Color</td>
             </tr>
             <?php
-            }
-    ?>
-</table>
-</form>
+                foreach($pdo->query($sql) as $fila){ ?>
+                    <tr>
+                        <td><input type="checkbox" name=<?php echo $fila[$id_mascota] ?> id="" value="1"></td>
+                        <td><?php echo $fila[$nom_mascota] ?></td>
+                        <td><?php echo $fila[$raza_mascota] ?></td>
+                        <td><?php echo $fila[$tam_mascota] ?></td>
+                        <td><?php echo $fila[$color_mascota] ?></td>
+                    </tr>
+                    <?php
+                    }
+            ?>
+        </table>
+    </form>
+</div>
 
 <?php include ('../Funciones/footer_resto.php') ?>
 </body>
