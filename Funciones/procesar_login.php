@@ -16,8 +16,7 @@ $password=$_POST["p"];
 $regresar=$_POST["b"];
 
 #construir comando
-$sql="SELECT $id_usuario,$user_usuario,$pass_usuario,$nom_usuario,$ape_usuario,$email_usuario 
-FROM $tab_usuario 
+$sql="SELECT * FROM $tab_usuario 
 WHERE $user_usuario = '$usuario'";
 
 #ejecutar comando
@@ -25,7 +24,7 @@ $resultado=$pdo->query($sql);
 $fila=$resultado->fetchAll();
 
 #verifica si hay un usuario con el nombre de usuario proporcionado
-if(count($fila)==1){
+if(count($fila)!=0){
     if($fila[0][$pass_usuario]==md5($password)){
         #login satisfactorio
         #se inicia la sesion y se guardan las variables id, usuario, nombres, apellidos y email
