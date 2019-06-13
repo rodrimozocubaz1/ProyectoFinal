@@ -7,7 +7,7 @@ $ape_usuario="apellidos";
 $email_usuario="email";
 $dir_usuario="direccion";
 $fecha_nac_usuario="fecha_nac";
-$pass_usuario="password";
+$pass_usuario="contrasena";
 
 $tab_mascota="mascotas";
 $id_mascota="id";

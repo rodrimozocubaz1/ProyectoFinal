@@ -16,7 +16,7 @@ $direccion=$_POST["direccion"];
 
 
 if($password!=$password2){
-    header("Location: registrarse.php?p=pass");
+    header("Location: ../paginas/registrarse.php?p=pass");
     exit();
 }
 
@@ -29,17 +29,18 @@ if(count($fila)==0){
     $pass=md5($password);
 
     #construir comando
-    $sql="INSERT INTO $tab_usuario VALUES (NULL,'$usuario', '$nombre', '$apellido', '$email', '$fecha_nac','$direccion', '$password')";
+    $sql="INSERT INTO $tab_usuario ($user_usuario, $nom_usuario, $ape_usuario, $email_usuario, $fecha_nac_usuario, $dir_usuario, $pass_usuario) 
+    VALUES ('$usuario', '$nombre', '$apellido', '$email', '$fecha_nac', '$direccion', '$pass')";
 
     #ejecutar comando
     $pdo->query($sql);
 
     #redirigir
-    header("Location: ../login.php");
+    header("Location: ../paginas/login.php");
 
 }
 else{
-    header("Location: registrarse.php?u=repetido");
+    header("Location: ../paginas/registrarse.php?u=repetido");
     exit();
 }
 

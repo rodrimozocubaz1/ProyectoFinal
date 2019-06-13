@@ -29,7 +29,7 @@ include ("../Funciones/variables.php");
 
         <?php }
     } ?>
-    <form action="procesar_insertar.php" method="post">
+    <form action="../Funciones/procesar_registro.php" method="post">
 
         <div>
             Nickname:<br>
@@ -41,7 +41,7 @@ include ("../Funciones/variables.php");
         </div>
         <div>
             Apellidos:<br>
-            <input id="apellidos" type="text" placeholder="&#128272; Apellidos" name="apelidos" required>
+            <input id="apellidos" type="text" placeholder="&#128272; Apellidos" name="apellidos" required>
         </div>
         <div>
             Email:<br>
