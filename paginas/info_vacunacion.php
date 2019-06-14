@@ -83,10 +83,6 @@ if(isset($_GET["v"])){
     <p><?php echo $filas[0][$fecha_vacunas] ?></p>
     </div>
     <div>
-    <p>Hora:</p>
-    <p><?php echo $filas[0][$hora_vacunas] ?></p>
-    </div>
-    <div>
     <p>Cupos restantes:</p>
     <p><?php echo $disponible ?></p>
     </div>

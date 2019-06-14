@@ -12,7 +12,7 @@ $pass_usuario="contrasena";
 $tab_mascota="mascotas";
 $id_mascota="id";
 $nom_mascota="nombre";
-$due_mascota="dueno";
+$due_mascota="id_dueno";
 $raza_mascota="raza";
 $color_mascota="color";
 $tam_mascota="tamano";
@@ -22,7 +22,6 @@ $tab_vacunas="vacunas";
 $id_vacunas="id";
 $nom_vacunas="nombre";
 $fecha_vacunas="fecha";
-$hora_vacunas="hora";
 $capacidad_vacunas="capacidad";
 $desc_vacunas="descripcion";
 
