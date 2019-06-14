@@ -1,0 +1,4 @@
+crear la base de datos "tupet" (OBVIAMENTE SIN COMILLAS, DUH!!!).
+darle en la opcion importar
+seleccionar el archivo tupet.sql
+darle al boton continuar

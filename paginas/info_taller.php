@@ -27,7 +27,7 @@ if(isset($_GET["t"])){
         $filas2=$resultado2->fetchAll();
 
         #cuantos cupos disponibles quedan
-        $disponible=intval($filas[0][$capacidad_taller])-count($filas2);
+        $disponible=$filas[0][$capacidad_taller]-count($filas2);
 
         #verificar si el usuario ya esta inscrito en el taller
         $id_usuario_sesion=$_SESSION["id"];
@@ -55,12 +55,12 @@ if(isset($_GET["t"])){
     <?php include ('../Funciones/cabecera_resto.php') ?>
     <h2><?php echo $nom ?></h2>
 
-    <form action="procesar_talleres.php" method="post">
-    <input type="hidden" name="id_u" value=<?php echo $id_usuario_sesion?>> <!-- enviar el id del usuario  -->
+    <form action="../Funciones/procesar_talleres.php" method="post">
+    <input type="hidden" name="id_u" value=<?php echo $_SESSION["id"] ?>> <!-- enviar el id del usuario  -->
     <input type="hidden" name="id_t" value=<?php echo $id ?>> <!-- enviar el id del taller  -->
     <?php 
     #boton inscribirse si hay cupos y si no esta inscrito
-    if($disponible > 0 || count($filas3)==0){ ?>
+    if(count($filas3)==0){ ?>
     <button type="submit" name="i">Inscribirse</button>
     <?php } ?>
     <?php 
@@ -100,9 +100,9 @@ if(isset($_GET["t"])){
     <?php
         for ($i=0; $i < count($filas2); $i++) { 
             $u=$filas2[$i][$idUsu_taller_usuario];
-            $sql4="SELECT $nom_usuario, $ape_usuario FROM $tab_usuario WHERE $id_usuario='$u'";
-            $r=pdo->query($sql4);
-            $f=r->fetch();
+            $sql4="SELECT * FROM $tab_usuario WHERE $id_usuario='$u'";
+            $r=$pdo->query($sql4);
+            $f=$r->fetch();
             ?>
             <tr>
                 <td><?php echo $f[$nom_usuario] ?></td>

@@ -1,11 +1,11 @@
 <?php
 include_once ("../Funciones/variables.php");
-include_once ("../Funciones/verificar_sesion.php");
+include_once ("../Funciones/verificar_sesSion.php");
 
 #crear pdo
 $pdo=new PDO("mysql:host=localhost;dbname=$dbname;charset=utf8","root","");
 #Lista de vacunacion 
-$sql="SELECT * FROM $tab_vacunas ORDER BY $id_vacunas DESC";
+$sql="SELECT * FROM $tab_vacunas ORDER BY $id_vacunas ASC";
 
 ?>
 <!DOCTYPE html>

@@ -1,6 +1,6 @@
 <?php
 include_once ("../Funciones/variables.php");
-include_once ("../Funciones/verificar_sesion.php");
+include_once ("../Funciones/verificar_session.php");
 
 #crear pdo
 $pdo=new PDO("mysql:host=localhost;dbname=$dbname;charset=utf8","root","");
@@ -27,11 +27,11 @@ if(isset($_GET["v"])){
         $filas2=$resultado2->fetchAll();
 
         #cuantos cupos disponibles quedan
-        $disponible=intval($filas[0][$capacidad_vacunas])-count($filas2);
+        $disponible=$filas[0][$capacidad_vacunas]-count($filas2);
 
         #verificar si el usuario ya esta inscrito en la vacunacion
         $id_usuario_sesion=$_SESSION["id"];
-        $sql3="SELECT * FROM $tab_vacuna_usuario WHERE $idVac_vacuna_usuario='$id' AND $id_Usu_vacunausuario='$id_usuario_sesion'";
+        $sql3="SELECT * FROM $tab_vacuna_usuario WHERE $idVac_vacuna_usuario='$id' AND $idUsu_vacuna_usuario='$id_usuario_sesion'";
         #ejecutar comando3
         $resultado3=$pdo->query($sql3);
         $filas3=$resultado3->fetchAll();
@@ -56,11 +56,11 @@ if(isset($_GET["v"])){
     <h2><?php echo $nom ?></h2>
 
     <form action="../Funciones/procesar_vacunacion.php" method="post">
-    <input type="hidden" name="id_u" value=<?php echo $id_usuario_sesion?>> <!-- enviar el id del usuario  -->
+    <input type="hidden" name="id_u" value=<?php echo $_SESSION["id"] ?>> <!-- enviar el id del usuario  -->
     <input type="hidden" name="id_v" value=<?php echo $id ?>> <!-- enviar el id de la vacunacion  -->
     <?php 
     #boton inscribirse si hay cupos y si no esta inscrito
-    if($disponible > 0 || count($filas3)==0){ ?>
+    if(count($filas3)==0){ ?>
     <button type="submit" name="i">Inscribirse</button>
     <?php } ?>
     <?php 
@@ -97,8 +97,8 @@ if(isset($_GET["v"])){
         for ($i=0; $i < count($filas2); $i++) { 
             $u=$filas2[$i][$idUsu_vacuna_usuario];
             $sql4="SELECT $nom_usuario, $ape_usuario FROM $tab_usuario WHERE $id_usuario='$u'";
-            $r=pdo->query($sql4);
-            $f=r->fetch();
+            $r=$pdo->query($sql4);
+            $f=$r->fetch();
             ?>
             <tr>
                 <td><?php echo $f[$nom_usuario] ?></td>

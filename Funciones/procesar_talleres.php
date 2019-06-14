@@ -16,9 +16,9 @@ $pdo=new PDO("mysql:host=localhost;dbname=$dbname;charset=utf8","root","");
 #comprobar q boton se apreto
 if(isset($_POST["b"])){
     #boton regresar. Regresa a talleres.php
-    header("Location: ../paginas/talleres.php")
+    header("Location: ../paginas/talleres.php");
     exit();
-}elseif ($_POST["i"]) {
+}elseif (isset($_POST["i"])) {
     #boton inscribirse. Inscribir usuario al taller
     
     #insertar el id del taller y del usuario en la tabla taller_usuario
@@ -28,20 +28,20 @@ if(isset($_POST["b"])){
     $pdo->query($sql);
 
     #Regresa a info_taller.php
-    header("Location: ../paginas/info_taller.php")
+    header("Location: ../paginas/info_taller.php?t=$id_t");
     exit();
     
-}elseif ($_POST["c"]) {
+}elseif (isset($_POST["c"])) {
     #boton cancelar. Retirar al usuario del taller.
     
     #borrar la fila donde se encuentre el id_taller con el id_usuario
-    $sql="DELETE $tab_taller_usuario WHERE $idTal_taller_usuario='$id_t' AND $idUsu_taller_usuario='$id_u')";
+    $sql="DELETE FROM $tab_taller_usuario WHERE $idTal_taller_usuario='$id_t' AND $idUsu_taller_usuario='$id_u'";
 
     #ejecutar comando
     $pdo->query($sql);
 
     #Regresa a info_taller.php
-    header("Location: ../paginas/info_taller.php")
+    header("Location: ../paginas/info_taller.php?t=$id_t");
     exit();
 }
 
