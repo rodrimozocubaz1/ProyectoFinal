@@ -40,6 +40,7 @@ $sql="SELECT * FROM $tab_mascota WHERE $due_mascota IS NULL ORDER BY $id_mascota
                 <td>Raza</td>
                 <td>Tamaño</td>
                 <td>Color</td>
+                <td>Foto</td>
             </tr>
             <?php
                 foreach($pdo->query($sql) as $fila){ ?>
@@ -49,6 +50,7 @@ $sql="SELECT * FROM $tab_mascota WHERE $due_mascota IS NULL ORDER BY $id_mascota
                         <td><?php echo $fila[$raza_mascota] ?></td>
                         <td><?php echo $fila[$tam_mascota] ?></td>
                         <td><?php echo $fila[$color_mascota] ?></td>
+                        <td><img src=<?php echo $fila[$foto_mascota] ?> alt="" sizes="" srcset=""></td>
                     </tr>
                     <?php
                     }
