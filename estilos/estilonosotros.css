@@ -14,9 +14,9 @@ body{
 body h1,h2,h3 {
     display:flex;
     font-size :3.8rem;
-    justify-content: center;
-    
+    justify-content: center;    
 }
+
 p{
     display:flex;
     max-width: 70rem;
@@ -107,25 +107,4 @@ p{
     padding-top:13rem;
     padding-bottom: 9rem;
     height:100vh;
-}
-@media screen and (max-width: 600px) {
-    .navegacion a:not(:first-child) {display: none;}
-    .navegacion a.icon {
-      float: right;
-      display: block;
-    }
-  }
-  
-  @media screen and (max-width: 600px) {
-    .navegacion.responsive {position: relative;}
-    .navegacion.responsive .icon {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .navegacion.responsive a {
-        float: none;
-        display: block;
-        text-align: left;
-    }
 }
