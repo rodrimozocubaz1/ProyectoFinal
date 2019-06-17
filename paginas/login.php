@@ -42,7 +42,7 @@ if(isset($_SESSION["id"])){
                     <input type="text" name="p" id="" placeholder="contraseña" required>
                     </div>
                     <div class="elemento iniciada">
-                    <input type="checkbox" name="s" id="" value="1">
+                    <input type="checkbox" name="s" value="1">
                     Mantener sesión iniciada
                     </div>
                     <button type="submit" class="elemento">Entrar</button>

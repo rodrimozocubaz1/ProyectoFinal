@@ -7,14 +7,14 @@ session_start();
 if(!isset($_SESSION["id"])){
     
     #entra si existe una cookie guardada con la id del usuario
-    if(isset($_COOKIE["id"])){
-        $id=$_COOKIE["id"];
+    if(isset($_COOKIE["id_usuario"])){
+        $id=$_COOKIE["id_usuario"];
         
         #crear pdo
         $pdo=new PDO("mysql:host=localhost;dbname=$dbname;charset=utf8","root","");
     
         #construir comando
-        $sql="SELECT $user_usuario, $nom_usuario, $ape_usuario, $email_usuario 
+        $sql="SELECT * 
         FROM $tab_usuario 
         WHERE $id_usuario = '$id'";
     
@@ -28,6 +28,8 @@ if(!isset($_SESSION["id"])){
         $_SESSION["nombres"]=$fila[$nom_usuario];
         $_SESSION["apellidos"]=$fila[$ape_usuario];
         $_SESSION["email"]=$fila[$email_usuario];
+        $_SESSION["direccion"]=$fila[$dir_usuario];
+        $_SESSION["fecha_nac"]=$fila[$fecha_nac_usuario];
     }
 }
 

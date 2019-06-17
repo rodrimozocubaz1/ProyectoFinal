@@ -25,10 +25,11 @@ $fecha_vacunas="fecha";
 $capacidad_vacunas="capacidad";
 $desc_vacunas="descripcion";
 
-$tab_vacuna_usuario="vacunas_usuario";
-$id_vacuna_usuario="id";
-$idVac_vacuna_usuario="id_vacunas";
-$idUsu_vacuna_usuario="id_usuario";
+$tab_vacuna_mascota="vacunas_mascota";
+$id_vacuna_mascota="id";
+$idVac_vacuna_mascota="id_vacunas";
+$idMas_vacuna_mascota="id_mascota";
+$idUsu_vacuna_mascota="id_usuario";
 
 $tab_talleres="talleres";
 $id_taller="id";

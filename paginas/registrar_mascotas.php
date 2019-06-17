@@ -1,5 +1,12 @@
 <?php 
 include ("../Funciones/variables.php");
+include ("../Funciones/verificar_session.php");
+
+if(!isset($_SESSION["id"])){
+    header("Location: ../paginas/login.php");
+    exit();
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,9 +31,7 @@ include ("../Funciones/variables.php");
         <?php }
 
     } ?>
-    <form action="../Funciones/procesar_registro_mascota.php" method="post">
-
-        
+    <form action="../Funciones/procesar_registro_mascota.php" method="post" enctype="multipart/form-data">
         <div>
             Nombre Mascota: <br>
             <input id="nombres" type="text" placeholder="&#128272; Nombres" name="nombre_mascota" required>
@@ -41,13 +46,15 @@ include ("../Funciones/variables.php");
         </div>
         <div>
             Tamaño:<br>
-            <input id="tamaño" type="text" placeholder="&#128272; Tamaño" name="tamaño" required>             
+            <input id="tamano" type="text" placeholder="&#128272; Tamaño" name="tamano" required>             
         </div>
         <div>
             <label for="foto">Foto:</label> 
-            <input id="foto" name="foto" size="30" type="file" />
+            <input type="file" name="foto" />
         </div>
-
+        <div>
+            <button type="submit">Registrar Mascota</button>
+        </div>
     </form>
 </div>
 <?php include ("../Funciones/footer_resto.php"); ?>  

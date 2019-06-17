@@ -2,6 +2,11 @@
 include_once ('../Funciones/variables.php');
 include_once ('../Funciones/verificar_session.php');
 
+if(!isset($_SESSION["id"])){
+    header("Location: ../paginas/login.php");
+    exit();
+}
+
 #crear pdo
 $pdo=new PDO("mysql:host=localhost;dbname=$dbname;charset=utf8","root","");
 #buscar  mascotas sin dueño
@@ -32,7 +37,8 @@ $sql="SELECT * FROM $tab_mascota WHERE $due_mascota IS NULL ORDER BY $id_mascota
     <?php }} ?>
 
     <form action="../Funciones/procesar_adopcion.php" method="post">
-    <button type="submit">Adoptar Seleccionados</button>
+    <input type="hidden" name="id_u" value="<?php echo $_SESSION['id'] ?>">
+    <button type="submit">Adoptar seleccionados</button>
     <button type="submit" name="b">Regresar a inicio</button>
         <table>
             <tr>
@@ -46,12 +52,14 @@ $sql="SELECT * FROM $tab_mascota WHERE $due_mascota IS NULL ORDER BY $id_mascota
             <?php
                 foreach($pdo->query($sql) as $fila){ ?>
                     <tr>
-                        <td><input type="checkbox" name=<?php echo $fila[$id_mascota] ?> id="" value="1"></td>
+                        <td><input type="checkbox" name="<?php echo $fila[$id_mascota] ?>" value="1"></td>
                         <td><?php echo $fila[$nom_mascota] ?></td>
                         <td><?php echo $fila[$raza_mascota] ?></td>
                         <td><?php echo $fila[$tam_mascota] ?></td>
                         <td><?php echo $fila[$color_mascota] ?></td>
-                        <td><img src=<?php echo $fila[$foto_mascota] ?> alt="" sizes="" srcset=""></td>
+                        <td><?php if($fila[$foto_mascota]!=NULL){ ?>
+                        <img src=<?php echo $fila[$foto_mascota] ?> alt="foto <?php echo $fila[$nom_mascota] ?>" width="150" > <?php } ?>
+                        </td>
                     </tr>
                     <?php
                     }

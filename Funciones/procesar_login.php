@@ -34,13 +34,15 @@ if(count($fila)!=0){
         $_SESSION["nombres"]=$fila[0][$nom_usuario];
         $_SESSION["apellidos"]=$fila[0][$ape_usuario];
         $_SESSION["email"]=$fila[0][$email_usuario];
+        $_SESSION["direccion"]=$fila[0][$dir_usuario];
+        $_SESSION["fecha_nac"]=$fila[0][$fecha_nac_usuario];
 
         #entra si desea crear la cookie
-        if(isset($_POST["s"]) && $_POST["s"]=="1"){
+        if(isset($_POST["s"])){
             #verificar que no exista la cookie
-            if(!isset($_COOKIE["id"])){
-                #crear cookie id con valor del nombre de usuario proporcionado, duracion un mes
-                setcookie("id",$fila[0][$id_usuario], time()+60*60*24*30);
+            if(!isset($_COOKIE["id_usuario"])){
+                #crear cookie id_usuario con valor del id de usuario proporcionado, duracion un mes
+                setcookie("id_usuario",$fila[0][$id_usuario], time()+(60*60*24*30));
             }
         }
         #regresar a index
