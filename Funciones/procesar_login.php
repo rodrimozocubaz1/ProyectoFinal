@@ -34,6 +34,8 @@ if(count($fila)!=0){
         $_SESSION["nombres"]=$fila[0][$nom_usuario];
         $_SESSION["apellidos"]=$fila[0][$ape_usuario];
         $_SESSION["email"]=$fila[0][$email_usuario];
+        $_SESSION["direccion"]=$fila[0][$dir_usuario];
+        $_SESSION["fecha_nac"]=$fila[0][$fecha_nac_usuario];
 
         #entra si desea crear la cookie
         if(isset($_POST["s"])){
