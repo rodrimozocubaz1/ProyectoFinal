@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 17-06-2019 a las 04:46:58
+-- Tiempo de generación: 17-06-2019 a las 09:42:49
 -- Versión del servidor: 10.3.15-MariaDB
 -- Versión de PHP: 7.3.6
 
@@ -35,7 +35,7 @@ CREATE TABLE `mascotas` (
   `raza` varchar(100) COLLATE latin1_spanish_ci DEFAULT NULL,
   `color` varchar(80) COLLATE latin1_spanish_ci DEFAULT NULL,
   `tamano` varchar(80) COLLATE latin1_spanish_ci DEFAULT NULL,
-  `foto` varchar(150) COLLATE latin1_spanish_ci DEFAULT NULL
+  `foto` varchar(200) COLLATE latin1_spanish_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
 
 --
@@ -43,9 +43,10 @@ CREATE TABLE `mascotas` (
 --
 
 INSERT INTO `mascotas` (`id`, `nombre`, `id_dueno`, `raza`, `color`, `tamano`, `foto`) VALUES
-(1, 'Rabioso', 2, 'Pitbull', 'Marrón', 'mediano', NULL),
+(1, 'Rabioso', 2, 'Pitbull', 'Marrón', 'mediano', '../uploads/fotos/descarga.jpg'),
 (2, 'Maní', NULL, 'Pekinés', 'Marrón claro', 'pequeño', NULL),
-(3, 'Comelon', 2, 'boxer', 'Atigrado', 'Mediano', NULL);
+(3, 'Comelon', 2, 'boxer', 'Atigrado', 'Mediano', NULL),
+(17, 'Pancracio', 2, 'Bulldog', 'marrón claro', 'mediano', '../uploads/fotos/2019-06-17_1560756885_foto_perrito.png');
 
 -- --------------------------------------------------------
 
@@ -113,7 +114,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `usuario`, `nombres`, `apellidos`, `email`, `direccion`, `fecha_nac`, `contrasena`) VALUES
-(2, 'gianko', 'Gianfranco', 'Mello Loayza', 'gianfranco.mello@usil.pe', 'jr. en mi jato puro 69', '2012-09-25', '202cb962ac59075b964b07152d234b70');
+(2, 'gianko', 'Gianfranco', 'Mello Loayza', 'gianfranco.mello@usil.pe', 'jr. en mi jato puro 69', '2012-09-24', '202cb962ac59075b964b07152d234b70');
 
 -- --------------------------------------------------------
 
@@ -200,7 +201,7 @@ ALTER TABLE `vacunas_mascota`
 -- AUTO_INCREMENT de la tabla `mascotas`
 --
 ALTER TABLE `mascotas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de la tabla `talleres`

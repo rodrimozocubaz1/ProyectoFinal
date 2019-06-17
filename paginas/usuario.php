@@ -73,7 +73,7 @@ $sql="SELECT * FROM $tab_mascota WHERE $due_mascota='$id_u'";
             <td><?php echo $fila[$tam_mascota] ?></td>
             <td>
             <?php if($fila[$foto_mascota]!=NULL){ ?>
-            <img src="<?php echo $fila[$foto_mascota] ?>" alt="foto <?php echo $fila[$nom_mascota] ?>">
+            <img src="<?php echo $fila[$foto_mascota] ?>" alt="foto <?php echo $fila[$nom_mascota] ?>" height="50">
             <?php }else { ?>
             Sin foto
             <?php } ?>

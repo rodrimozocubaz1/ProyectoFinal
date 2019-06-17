@@ -16,7 +16,7 @@ include ("../Funciones/verificar_session.php");
 <body>
     <?php include ("../Funciones/cabecera_resto.php"); ?>
     <div class="contenido">
-    <form action="../Funciones/procesar_reportar_mascota.php" method="post">
+    <form action="../Funciones/procesar_reportar_mascota.php" method="post" enctype="multipart/form-data">
         <?php
         if(isset($GET["r"])){
             if($GET["r"]=="ok"){ ?>
@@ -42,7 +42,7 @@ include ("../Funciones/verificar_session.php");
         </div>
         <div>
             <label for="foto">Foto:</label> 
-            <input id="foto" name="foto" size="30" type="file" />
+            <input name="foto" type="file" />
         </div>
         <div>
             <input type="submit" value="Reportar Mascota">
