@@ -3,7 +3,7 @@ include_once ("../Funciones/variables.php");
 include_once ("../Funciones/verificar_session.php");
 
 if(!isset($_SESSION["id"])){
-    header("Location: ../paginas/login");
+    header("Location: ../paginas/login.php");
     exit();
 }
 
