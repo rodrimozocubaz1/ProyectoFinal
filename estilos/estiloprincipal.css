@@ -12,6 +12,9 @@ body{
 h1{
     font-size:3.8rem;
 }
+.logo{
+    border-radius: 10px;
+}
 
 .site-header.inicio{
     background-image: url('../Imagenes/Imagen.jpg');

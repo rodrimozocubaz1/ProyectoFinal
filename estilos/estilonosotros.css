@@ -24,6 +24,9 @@ p{
     margin: 0 auto 0 auto;
     
 }
+.logo{
+    border-radius: 10px;
+}
 .contenido{
     padding-top: 25rem;
     margin: 0 auto;

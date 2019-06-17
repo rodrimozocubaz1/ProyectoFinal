@@ -9,8 +9,9 @@ include ("../Funciones/verificar_session.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Reportar Mascota Perdida</title>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../estilos/estilonosotros.css">
-    <link rel="stylesheet" href="../estilos/registrarse.css">
+    <link rel="stylesheet" href="../estilos/estilos_login.css">
 </head>
 
 <body>
@@ -24,27 +25,27 @@ include ("../Funciones/verificar_session.php");
             <?php }
 
         } ?>
-        <div>
+        <div class="elemento">
             Nombre: <br>
             <input id="nombre" type="text" name="nombre">
         </div>
-        <div>
+        <div class="elemento">
             Raza:<br>
             <input id="raza" type="text" name="raza">
         </div>
-        <div>
+        <div class="elemento">
             Color:<br>
             <input id="color" type="text" name="color">
         </div>
-        <div>
+        <div class="elemento">
             Tamaño:<br>
             <input id="tamano" type="text" name="tamano">             
         </div>
-        <div>
+        <div class="elemento">
             <label for="foto">Foto:</label> 
             <input name="foto" type="file" />
         </div>
-        <div>
+        <div class="elemento">
             <input type="submit" value="Reportar Mascota">
         </div>
 
