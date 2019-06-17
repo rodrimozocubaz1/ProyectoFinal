@@ -1,6 +1,7 @@
 <?php 
 include ("../Funciones/variables.php");
 include ("../Funciones/verificar_session.php");
+
 if (isset($_SESSION["id"])) {
     header("Location: ../index.php");
     exit();

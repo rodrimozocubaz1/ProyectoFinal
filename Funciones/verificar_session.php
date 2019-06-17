@@ -7,8 +7,8 @@ session_start();
 if(!isset($_SESSION["id"])){
     
     #entra si existe una cookie guardada con la id del usuario
-    if(isset($_COOKIE["id"])){
-        $id=$_COOKIE["id"];
+    if(isset($_COOKIE["id_usuario"])){
+        $id=$_COOKIE["id_usuario"];
         
         #crear pdo
         $pdo=new PDO("mysql:host=localhost;dbname=$dbname;charset=utf8","root","");

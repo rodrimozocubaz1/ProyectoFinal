@@ -2,6 +2,11 @@
 include_once ("../Funciones/variables.php");
 include_once ("../Funciones/verificar_session.php");
 
+if(!isset($_SESSION["id"])){
+    header("Location: ../paginas/login.php");
+    exit();
+}
+
 #crear pdo
 $pdo=new PDO("mysql:host=localhost;dbname=$dbname;charset=utf8","root","");
 #lista de todos talleres 
