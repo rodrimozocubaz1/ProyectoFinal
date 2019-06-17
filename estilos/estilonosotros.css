@@ -112,6 +112,15 @@ p{
     height:100vh;
 }
 .contenedor_maps{
-    margin: 0rem 37rem;
-    
+    margin: 0rem 37rem;    
+}
+.enlaces{
+    text-decoration: none;
+    background-color:#1E8AD9;
+    border: 0;
+    padding: 10px;
+    font-size: 3rem;
+    font-family: 'Indie Flower', cursive;
+    color:white;
+    border-radius: 20px; 
 }
