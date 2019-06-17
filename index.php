@@ -14,29 +14,20 @@ include ('Funciones/verificar_session.php');
 </head>
 <body>
     
-    <?php include ('Funciones/cabecera.php'); ?>
+    <?php include ('Funciones/cabecera.php'); ?>   
 
-    
-
-    <main>
-        <div>
-            <h2>Como ayudamos a las mascotas perdidas</h2>
-            <p>Nos encargamos de buscar un hogar a los animales domésticos que han sido encontrados perdidos o 
-            abandonados, dandoles asi una oportunidad para poder recibir amor.</p>
+    <main class="main-contenedor">
+        <div class="ayudamos">
+            <div class="img_ayudamos">
+                <img src="Imagenes/perro_ayuda.jpg" alt="" width="100%">
+            </div>
+            <div class="ayudamos_texto">        
+                <h2>Como ayudamos a las mascotas perdidas</h2>
+                <p>Nos encargamos de buscar un hogar a los animales domésticos que han sido encontrados perdidos o 
+                abandonados, dandoles asi una oportunidad para poder volver a reintegrarse a una familia
+                que pueda darles el amor y cariño que merecen.</p>
+            </div>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
     </main>
     
     <?php include ('Funciones/footer.php');  ?>

@@ -39,52 +39,43 @@ if (isset($_SESSION["id"])) {
         <?php }
     } ?>
 
-        <div>
+        <div class="elemento">
             Nickname:<br>
-            <input id="usuario" type="text" placeholder="&#128272; Usuario" name="usuario" required>
+            <input id="usuario" type="text" placeholder=" Usuario" name="usuario" required>
         </div>
-        <div>
+        <div class="elemento">
             Nombres: <br>
-            <input id="nombres" type="text" placeholder="&#128272; Nombres" name="nombres" required>
+            <input id="nombres" type="text" placeholder=" Nombres" name="nombres" required>
         </div>
-        <div>
+        <div class="elemento">
             Apellidos:<br>
-            <input id="apellidos" type="text" placeholder="&#128272; Apellidos" name="apellidos" required>
+            <input id="apellidos" type="text" placeholder=" Apellidos" name="apellidos" required>
         </div>
-        <div>
+        <div class="elemento">
             Email:<br>
-            <input id="email" type="email" placeholder="&#128272; Email" name="email" required>              
+            <input id="email" type="email" placeholder=" Email" name="email" required>              
         </div>
-        <div>
+        <div class="elemento">
             Fecha de Nacimiento:<br>
-            <input id="fecha_nac" type="date" placeholder="&#128272; Nacimiento" name="fecha_nac" required>             
+            <input id="fecha_nac" type="date" placeholder=" Nacimiento" name="fecha_nac" required>             
         </div>
-        <div>
+        <div class="elemento">
             Direccion:<br>
-            <input id="direccion" type="text" placeholder="&#128272; Direccion" name="direccion" required>               
+            <input id="direccion" type="text" placeholder=" Direccion" name="direccion" required>               
         </div>
-        <div>
+        <div class="elemento">
             Contraseña:<br>
-            <input id="password1" type="password" placeholder="&#128272; Contraseña" name="password1" required>               
+            <input id="password1" type="password" placeholder=" Contraseña" name="password1" required>               
         </div>
-        <div>
+        <div class="elemento">
             Confirmar contraseña:<br>
-            <input id="password2" type="password" placeholder="&#128272; Confirmar Contraseña" name="password2"><br>               
+            <input id="password2" type="password" placeholder=" Confirmar Contraseña" name="password2"><br>               
         </div>
-        <div>
+        <div class="elemento">
             <input type="submit" value="Registrarse">
             
         </div>
-        <script>
-            function myFunction() {
-            var x = document.getElementById("myNav");
-            if (x.className === "navegacion") {
-                x.className += " responsive";
-            } else {
-                x.className = "navegacion";
-            }
-            }
-            </script>
+        
 
     </form>
 </div>

@@ -12,6 +12,7 @@ body{
 h1{
     font-size:3.8rem;
 }
+
 .site-header.inicio{
     background-image: url('../Imagenes/Imagen.jpg');
     height: 100vh; /*permite que se cubra el alto total disponible*/
@@ -19,9 +20,9 @@ h1{
     background-position: center center;/*Muestra el contenido de la imagen desde el centro*/
     background-size: cover;/*Permite que se vea toda la imagen*/
 }
-.contenedor{
+.main-contenedor{
     max-width: 100rem;    
-    margin: 0 auto;
+    margin: 5rem auto;
     
 }
 
@@ -30,6 +31,8 @@ h1{
     justify-content: space-between; /*posicionar los elementos al final. alinea horizontalmente*/
     padding-top: 3rem;    
     align-items: center; /*alinea verticalmente*/
+    width:100rem;
+    margin:0 auto;
 }
 
 .navegacion a{
@@ -60,4 +63,11 @@ h1{
 }
 .nav_footer a{
     margin:6rem;
+}
+.ayudamos{
+    display:flex;  
+    justify-content: space-between;  
+}
+.img_ayudamos, .ayudamos_texto{
+    flex-basis: calc(50% - 1rem);
 }
