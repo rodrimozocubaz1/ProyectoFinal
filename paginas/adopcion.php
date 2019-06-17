@@ -15,6 +15,7 @@ $sql="SELECT * FROM $tab_mascota WHERE $due_mascota IS NULL ORDER BY $id_mascota
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Adopción</title>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../estilos/estilonosotros.css">
 </head>
 <body>
