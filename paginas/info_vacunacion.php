@@ -58,39 +58,41 @@ if(isset($_GET["v"])){
     <table>
         <tr>
             <td>Nombre Mascota</td>
-            <td>Operación</td>
+            <td>Inscripciones</td>
         </tr>
-        <tr>
+        
             <?php
             #mostrar lista de mascotas del usuario
             $id_usuario_sesion=$_SESSION["id"];
             $sql3="SELECT * FROM $tab_mascota WHERE $due_mascota='$id_usuario_sesion'";
             
-            foreach ($pdo->query($sql3) as $f) { ?>
+            foreach ($pdo->query($sql3) as $f0) { ?>
             <tr>
-                <td><?php echo $f[$nom_mascota] ?></td>
+                <td><?php echo $f0[$nom_mascota] ?></td>
                 <td>
                 <?php 
-                $id_m=$f[$id_mascota];
-                $r=$pdo->query("SELECT * FROM $tab_vacuna_mascota WHERE $idMas_vacuna_mascota='$id_m' AND $idVac_vacuna_mascota='$id'");
-                $f2=$r->fetchAll();
+                $id_m=$f0[$id_mascota];
+                $r0=$pdo->query("SELECT * FROM $tab_vacuna_mascota WHERE $idMas_vacuna_mascota='$id_m' AND $idVac_vacuna_mascota='$id'");
+                $f3=$r0->fetchAll();
 
-                if(count($f2)==0){ ?>
-                <button type="submit" name="i" value="<?php $id_m ?>">Inscribir</button>
+                if(count($f3)==1){ ?>
+                    <button type="submit" name="<?php echo $id_m ?>" value="c">Cancelar inscripción</button>
+                <?php
+                }elseif($disponible==0){ ?>
+                    No hay cupos disponibles
                 <?php
                 }else{ ?>
-                <button type="submit" name="c" value="<?php $id_m ?>">Cancelar</button>
+                    <button type="submit" name="<?php echo $id_m ?>" value="i">Inscribirse</button>
                 <?php } ?>
                 </td>
             </tr>
             <?php
             }
             ?>
-        </tr>
+        
     </table>
-    <?php } ?>
-    
     </form>
+
     <div>
     <p>Nombre Vacuna:</p>
     <p><?php echo $nom ?></p>
@@ -117,18 +119,18 @@ if(isset($_GET["v"])){
     <?php
         for ($i=0; $i < count($filas2); $i++) { 
             $m=$filas2[$i][$idMas_vacuna_mascota];
-            $sql4="SELECT $nom_mascota FROM $tab_mascota WHERE $id_mascota='$m'";
+            $sql4="SELECT * FROM $tab_mascota WHERE $id_mascota='$m'";
             $r=$pdo->query($sql4);
             $f=$r->fetch();
             
             $u=$filas2[$i][$idUsu_vacuna_mascota];
-            $sql5="SELECT $nom_usuario, $ape_usuario FROM $tab_usuario WHERE $id_usuario='$u'";
+            $sql5="SELECT * FROM $tab_usuario WHERE $id_usuario='$u'";
             $r2=$pdo->query($sql5);
             $f2=$r2->fetch();
             ?>
             <tr>
                 <td><?php echo $f[$nom_mascota] ?></td>
-                <td><?php echo $f[$ape_usuario] ?>, <?php echo $f[$nom_usuario] ?></td>                
+                <td><?php echo $f2[$ape_usuario] ?>, <?php echo $f2[$nom_usuario] ?></td>                
             </tr>
             <?php
         }

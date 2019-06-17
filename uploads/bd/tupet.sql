@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-06-2019 a las 06:38:22
+-- Tiempo de generación: 17-06-2019 a las 04:46:58
 -- Versión del servidor: 10.3.15-MariaDB
 -- Versión de PHP: 7.3.6
 
@@ -37,6 +37,15 @@ CREATE TABLE `mascotas` (
   `tamano` varchar(80) COLLATE latin1_spanish_ci DEFAULT NULL,
   `foto` varchar(150) COLLATE latin1_spanish_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `mascotas`
+--
+
+INSERT INTO `mascotas` (`id`, `nombre`, `id_dueno`, `raza`, `color`, `tamano`, `foto`) VALUES
+(1, 'Rabioso', 2, 'Pitbull', 'Marrón', 'mediano', NULL),
+(2, 'Maní', NULL, 'Pekinés', 'Marrón claro', 'pequeño', NULL),
+(3, 'Comelon', 2, 'boxer', 'Atigrado', 'Mediano', NULL);
 
 -- --------------------------------------------------------
 
@@ -74,6 +83,13 @@ CREATE TABLE `taller_usuario` (
   `id_taller` int(11) NOT NULL,
   `id_usuario` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `taller_usuario`
+--
+
+INSERT INTO `taller_usuario` (`id`, `id_taller`, `id_usuario`) VALUES
+(6, 1, 2);
 
 -- --------------------------------------------------------
 
@@ -126,12 +142,13 @@ INSERT INTO `vacunas` (`id`, `nombre`, `fecha`, `capacidad`, `descripcion`) VALU
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `vacunas_usuario`
+-- Estructura de tabla para la tabla `vacunas_mascota`
 --
 
-CREATE TABLE `vacunas_usuario` (
+CREATE TABLE `vacunas_mascota` (
   `id` int(11) NOT NULL,
   `id_vacunas` int(11) NOT NULL,
+  `id_mascota` int(11) NOT NULL,
   `id_usuario` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
 
@@ -143,8 +160,7 @@ CREATE TABLE `vacunas_usuario` (
 -- Indices de la tabla `mascotas`
 --
 ALTER TABLE `mascotas`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `id_dueno` (`id_dueno`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `talleres`
@@ -171,9 +187,9 @@ ALTER TABLE `vacunas`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `vacunas_usuario`
+-- Indices de la tabla `vacunas_mascota`
 --
-ALTER TABLE `vacunas_usuario`
+ALTER TABLE `vacunas_mascota`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -184,7 +200,7 @@ ALTER TABLE `vacunas_usuario`
 -- AUTO_INCREMENT de la tabla `mascotas`
 --
 ALTER TABLE `mascotas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `talleres`
@@ -196,7 +212,7 @@ ALTER TABLE `talleres`
 -- AUTO_INCREMENT de la tabla `taller_usuario`
 --
 ALTER TABLE `taller_usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
@@ -211,10 +227,10 @@ ALTER TABLE `vacunas`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT de la tabla `vacunas_usuario`
+-- AUTO_INCREMENT de la tabla `vacunas_mascota`
 --
-ALTER TABLE `vacunas_usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+ALTER TABLE `vacunas_mascota`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

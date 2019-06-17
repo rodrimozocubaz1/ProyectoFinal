@@ -25,7 +25,7 @@ $fecha_vacunas="fecha";
 $capacidad_vacunas="capacidad";
 $desc_vacunas="descripcion";
 
-$tab_vacuna_usuario="vacunas_mascota";
+$tab_vacuna_mascota="vacunas_mascota";
 $id_vacuna_mascota="id";
 $idVac_vacuna_mascota="id_vacunas";
 $idMas_vacuna_mascota="id_mascota";
