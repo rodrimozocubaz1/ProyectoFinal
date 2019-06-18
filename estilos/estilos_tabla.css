@@ -37,7 +37,15 @@ button{
 }  
 .botones{
    margin: 2rem auto;
+   width: 25rem;
+}
+.botones_adopcion{
+   margin: 2rem auto;
    width: 40rem;
+}
+.botones_usuario{
+   margin: 2rem auto;
+   width: 30rem;
 }
 input{
    border-radius: 8px;
@@ -50,6 +58,7 @@ input{
 }
 .tabla_taller{
    margin-top: 3rem;
-
 }
-
+.contenido_usuario{
+   padding-bottom: 40rem;
+}

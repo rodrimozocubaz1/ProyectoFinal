@@ -21,6 +21,7 @@ $sql="SELECT * FROM $tab_mascota WHERE $due_mascota='$id_u'";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Página de <?php echo $_SESSION["usuario"] ?></title>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../estilos/estilonosotros.css">
     <link rel="stylesheet" href="../estilos/estilos_tabla.css">
 </head>
@@ -51,16 +52,18 @@ $sql="SELECT * FROM $tab_mascota WHERE $due_mascota='$id_u'";
             <div><label for="">Fecha de Nacimiento:</label><br>
             <input type="date" name="f" value="<?php echo $_SESSION["fecha_nac"] ?>">
             </div>
-            <div>
-            <button type="submit">Guardar Cambios</button>
+            <div class="botones_usuario">
+                <button type="submit" class="botones">Guardar Cambios</button>
             </div>
         </fieldset>
         </form>
         <h2>Lista de Mascotas</h2>
         <form action="../paginas/registrar_mascotas.php" method="get">
-        <button type="submit">Agregar Mascota</button>
+        <div class="botones_usuario">
+            <button type="submit" class="botones">Agregar Mascota</button>
+        </div>
         </form>
-        <table>
+        <table class="mascotas">
             <tr>
                 <td>Nombre</td>
                 <td>Raza</td>
@@ -77,7 +80,7 @@ $sql="SELECT * FROM $tab_mascota WHERE $due_mascota='$id_u'";
                 <td><?php echo $fila[$tam_mascota] ?></td>
                 <td>
                 <?php if($fila[$foto_mascota]!=NULL){ ?>
-                <img src="<?php echo $fila[$foto_mascota] ?>" alt="foto <?php echo $fila[$nom_mascota] ?>" height="50">
+                <img src="<?php echo $fila[$foto_mascota] ?>" alt="foto <?php echo $fila[$nom_mascota] ?>" width="150">
                 <?php }else { ?>
                 Sin foto
                 <?php } ?>
@@ -86,6 +89,7 @@ $sql="SELECT * FROM $tab_mascota WHERE $due_mascota='$id_u'";
             <?php } ?>
         </table>
     </div>
+
     <?php include ("../Funciones/footer_resto.php"); ?>
 </body>
 </html>

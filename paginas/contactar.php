@@ -26,7 +26,7 @@ include ("../Funciones/verificar_session.php");
             </div>            
             <h3>Facebook</h3>
             <div class="boton_face">
-                <a href="https://www.facebook.com/paco.tupet.5" class="enlaces">TuPet FB ( clickea )</a>           
+                <a href="https://www.facebook.com/paco.tupet.5" class="enlaces" target="_blank">TuPet FB ( clickea )</a>           
             </div>
         
     </div>    

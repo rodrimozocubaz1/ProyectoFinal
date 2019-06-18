@@ -64,7 +64,7 @@ $sql="SELECT * FROM $tab_mascota WHERE $due_mascota IS NULL ORDER BY $id_mascota
                     }
             ?>
         </table>
-        <div class="botones">
+        <div class="botones_adopcion">
             <button type="submit">Adoptar seleccionados</button>
             <button type="submit" name="b">Regresar a inicio</button>
         </div>
