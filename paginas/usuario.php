@@ -34,23 +34,22 @@ $sql="SELECT * FROM $tab_mascota WHERE $due_mascota='$id_u'";
         <legend><h2>Datos Personales</h2></legend>
             <input type="hidden" name="i" value="<?php echo $_SESSION["id"] ?>">
             <div>
-            <label for="">Nombres:</label><br>
-            <input type="text" name="n" value="<?php echo $_SESSION["nombres"] ?>">
+                <label for="">Nombres:</label><br>
+                <input type="text" name="n" value="<?php echo $_SESSION["nombres"] ?>">
             </div>
             <div>
-            <label for="">Apellidos:</label><br>
-            <input type="text" name="a" value="<?php echo $_SESSION["apellidos"] ?>">
+                <label for="">Apellidos:</label><br>
+                <input type="text" name="a" value="<?php echo $_SESSION["apellidos"] ?>">
             </div>
             <div>
-            <label for="">Email:</label><br>
-            <input type="email" name="e" value="<?php echo $_SESSION["email"] ?>">
+                <label for="">Email:</label><br>
+                <input type="email" name="e" value="<?php echo $_SESSION["email"] ?>">
             </div>
             <div>
-            <label for="">Dirección:</label><br>
-            <input type="text" name="d" value="<?php echo $_SESSION["direccion"] ?>">
+                <label for="">Dirección:</label><br>
+                <input type="text" name="d" value="<?php echo $_SESSION["direccion"] ?>">
             </div>
-            <div><label for="">Fecha de Nacimiento:</label><br>
-            <input type="date" name="f" value="<?php echo $_SESSION["fecha_nac"] ?>">
+            <div><label for="">Fecha de Nacimiento:</label><br>       
             </div>
             <div class="botones_usuario">
                 <button type="submit" class="botones">Guardar Cambios</button>
@@ -63,13 +62,15 @@ $sql="SELECT * FROM $tab_mascota WHERE $due_mascota='$id_u'";
             <button type="submit" class="botones">Agregar Mascota</button>
         </div>
         </form>
+    </div>
+    <div class="tabla">
         <table class="mascotas">
             <tr>
-                <td>Nombre</td>
-                <td>Raza</td>
-                <td>Color</td>
-                <td>Tamaño</td>
-                <td>Foto</td>
+                <th>Nombre</th>
+                <th>Raza</th>
+                <th>Color</th>
+                <th>Tamaño</th>
+                <th class="imagen_perro">Foto</th>
             </tr>
             <?php
             foreach ($pdo->query($sql) as $fila) { ?>
@@ -78,9 +79,11 @@ $sql="SELECT * FROM $tab_mascota WHERE $due_mascota='$id_u'";
                 <td><?php echo $fila[$raza_mascota] ?></td>
                 <td><?php echo $fila[$color_mascota] ?></td>
                 <td><?php echo $fila[$tam_mascota] ?></td>
-                <td>
+                <td class="imagen_perro">
                 <?php if($fila[$foto_mascota]!=NULL){ ?>
-                <img src="<?php echo $fila[$foto_mascota] ?>" alt="foto <?php echo $fila[$nom_mascota] ?>" width="150">
+                
+                    <img src="<?php echo $fila[$foto_mascota] ?>" alt="foto <?php echo $fila[$nom_mascota] ?>" height="150px">
+                
                 <?php }else { ?>
                 Sin foto
                 <?php } ?>
@@ -89,7 +92,7 @@ $sql="SELECT * FROM $tab_mascota WHERE $due_mascota='$id_u'";
             <?php } ?>
         </table>
     </div>
-
+                
     <?php include ("../Funciones/footer_resto.php"); ?>
 </body>
 </html>
