@@ -2,10 +2,6 @@
 include ("../Funciones/variables.php");
 include ("../Funciones/verificar_session.php");
 
-if(!isset($_SESSION["id"])){
-   header("Location: ../paginas/login.php");
-   exit();
-}
 
 #leer datos de post
 $nombre_mascota=$_POST["nombre"];
@@ -58,6 +54,6 @@ VALUES ('$nombre_mascota', '$raza', '$color','$tamano','$target_file')";
 $pdo->query($sql);
 
 #redirigir
-header("Location: ../index.php");
+header("Location: ../paginas/reportar_mascota.php");
 
 ?>
