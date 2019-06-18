@@ -1,0 +1,23 @@
+table {
+    width: 100%;
+    border: 1px solid #000;
+ }
+ th, td {
+    width: 25%;
+    text-align: left;
+    vertical-align: top;
+    border: 1px solid #000;
+    border-collapse: collapse;
+    padding: 0.3em;
+    caption-side: bottom;
+    color:white;
+ }
+ a{
+    color:white;
+    text-decoration: none; 
+    margin-right:2rem;
+    font-size: 1.8rem;
+ }
+ a:hover{
+    color: #11ffa9;
+}
