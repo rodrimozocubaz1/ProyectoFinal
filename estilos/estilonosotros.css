@@ -84,42 +84,8 @@ p{
 .nav_footer a{
     margin:6rem;
 }
- 
-/*Solo afecta al contenido de la pagina nosotros*/
-.contenido_somos{
-    padding-top: 13rem;
-    padding-bottom: 9rem;
-    height: 100vh;
-    background-image: url('../Imagenes/perritos_nosotros.jpg');
-    background-position: center center;
-    background-size: cover;
-}
 
-.contenido_contactar{
-    padding-top:13rem;
-    padding-bottom: 25rem;
-    height:100vh;    
-    background-image: url('../Imagenes/perrito_lentes.jpg');
-    background-position: center center;
-    background-size: cover;
-}
-.contenido-adopcion{
-    padding-top:13rem;
-    padding-bottom: 9rem;
-    height:100vh;
-    background-image: url('../Imagenes/perros_adopcion.jpg');
-    background-position: center center;
-    background-size: cover;
-}
 
-.contenido_talleres{
-    padding-top:13rem;
-    padding-bottom: 9rem;
-    height:100vh;
-    background-image: url('../Imagenes/perrito_talleres.jpg');
-    background-position: center center;
-    background-size: cover;
-}
 .contenedor_maps{
     margin: 0rem 37rem;    
 }
@@ -140,10 +106,44 @@ p{
     width:30rem;
 }
 .contenedor-vacunacion{
+    
+    background-image: url('../Imagenes/perro_ayuda.jpg');
+    
+}
+.contenido-reportar{
+   
+    background-image: url('../Imagenes/perro_reportar.jpg');
+    
+}
+.contenido_somos{
+    
+    background-image: url('../Imagenes/perritos_nosotros.jpg');
+    
+}
+
+.contenido_contactar{
+    padding-top:13rem;
+    padding-bottom: 25rem;
+    height:100vh;    
+    background-image: url('../Imagenes/perrito_lentes.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+.contenido-adopcion{
+    
+    background-image: url('../Imagenes/perros_adopcion.jpg');
+    
+}
+
+.contenido_talleres{
+    
+    background-image: url('../Imagenes/perrito_talleres.jpg');
+    
+}
+.contenedor-vacunacion,.contenido_talleres,.contenido-adopcion,.contenido_somos,.contenido-reportar{
     padding-top:13rem;
     padding-bottom: 9rem;
-    height:100vh;
-    background-image: url('../Imagenes/perro_ayuda.jpg');
+    height:100vh;    
     background-position: center center;
     background-size: cover;
 }

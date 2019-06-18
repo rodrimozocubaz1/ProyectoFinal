@@ -16,7 +16,7 @@ include ("../Funciones/verificar_session.php");
 
 <body>
     <?php include ("../Funciones/cabecera_resto.php"); ?>
-    <div class="contenido">
+    <div class="contenido-reportar">
     <form action="../Funciones/procesar_reportar_mascota.php" method="post" enctype="multipart/form-data">
         <?php
         if(isset($GET["r"])){
