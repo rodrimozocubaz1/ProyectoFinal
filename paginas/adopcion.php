@@ -22,6 +22,7 @@ $sql="SELECT * FROM $tab_mascota WHERE $due_mascota IS NULL ORDER BY $id_mascota
     <title>Adopción</title>
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../estilos/estilonosotros.css">
+    <link rel="stylesheet" href="../estilos/estilos_tabla.css">
 </head>
 <body>
 <?php include ('../Funciones/cabecera_resto.php') ?>
@@ -37,9 +38,7 @@ $sql="SELECT * FROM $tab_mascota WHERE $due_mascota IS NULL ORDER BY $id_mascota
     <?php }} ?>
 
     <form action="../Funciones/procesar_adopcion.php" method="post">
-    <input type="hidden" name="id_u" value="<?php echo $_SESSION['id'] ?>">
-    <button type="submit">Adoptar seleccionados</button>
-    <button type="submit" name="b">Regresar a inicio</button>
+    <input type="hidden" name="id_u" value="<?php echo $_SESSION['id'] ?>"> 
         <table>
             <tr>
                 <td></td>
@@ -65,6 +64,10 @@ $sql="SELECT * FROM $tab_mascota WHERE $due_mascota IS NULL ORDER BY $id_mascota
                     }
             ?>
         </table>
+        <div class="botones">
+            <button type="submit">Adoptar seleccionados</button>
+            <button type="submit" name="b">Regresar a inicio</button>
+        </div>
     </form>
 </div>
 

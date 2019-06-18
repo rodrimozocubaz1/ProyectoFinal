@@ -107,6 +107,9 @@ p{
     padding-top:13rem;
     padding-bottom: 9rem;
     height:100vh;
+    background-image: url('../Imagenes/perros_adopcion.jpg');
+    background-position: center center;
+    background-size: cover;
 }
 
 .contenido_talleres{
@@ -143,5 +146,4 @@ p{
     background-image: url('../Imagenes/perro_ayuda.jpg');
     background-position: center center;
     background-size: cover;
-
 }
