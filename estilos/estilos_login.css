@@ -34,7 +34,7 @@ button{
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 20px;
+    
 }
 .elemento.iniciada{
     display:inline;
@@ -49,6 +49,10 @@ input{
     font-family: 'Indie Flower', cursive;
     width: 15rem;
     height: 2rem;
+}
+.elemento.elemento_ultimo{
+    margin-top: 5rem;
+    size: 3rem;    
 }
 
 

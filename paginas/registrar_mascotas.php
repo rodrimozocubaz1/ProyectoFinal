@@ -17,7 +17,7 @@ if(!isset($_SESSION["id"])){
     <title>Registrarse</title>
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../estilos/estilonosotros.css">
-    <link rel="stylesheet" href="../estilos/registrarse.css">
+    <link rel="stylesheet" href="../estilos/estilos_login.css">
     
 </head>
 
@@ -32,29 +32,29 @@ if(!isset($_SESSION["id"])){
 
     } ?>
     <form action="../Funciones/procesar_registro_mascota.php" method="post" enctype="multipart/form-data">
-        <div>
+        <div class="elemento">
             Nombre Mascota: <br>
             <input id="nombres" type="text" placeholder="&#128272; Nombres" name="nombre_mascota" required>
         </div>
-        <div>
+        <div class="elemento">
             Raza:<br>
             <input id="raza" type="text" placeholder="&#128272; Raza" name="raza" required>
         </div>
-        <div>
+        <div class="elemento">
             Color:<br>
             <input id="color" type="text" placeholder="&#128272; Color" name="color" required>              
         </div>
-        <div>
+        <div class="elemento">
             Tamaño:<br>
             <input id="tamano" type="text" placeholder="&#128272; Tamaño" name="tamano" required>             
         </div>
-        <div>
+        <div class="elemento">
             <label for="foto">Foto:</label> 
             <input type="file" name="foto" />
         </div>
-        <div>
-            <button type="submit">Registrar Mascota</button>
-        </div>
+        
+            <button type="submit" class="elemento">Registrar Mascota</button>
+        
     </form>
 </div>
 <?php include ("../Funciones/footer_resto.php"); ?>  

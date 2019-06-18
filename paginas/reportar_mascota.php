@@ -24,30 +24,32 @@ include ("../Funciones/verificar_session.php");
                 <p style="color:green">Mascota reportada con éxito. Gracias</p>
             <?php }
 
-        } ?>
-        <div class="elemento">
-            Nombre: <br>
-            <input id="nombre" type="text" name="nombre">
-        </div>
-        <div class="elemento">
-            Raza:<br>
-            <input id="raza" type="text" name="raza">
-        </div>
-        <div class="elemento">
-            Color:<br>
-            <input id="color" type="text" name="color">
-        </div>
-        <div class="elemento">
-            Tamaño:<br>
-            <input id="tamano" type="text" name="tamano">             
-        </div>
-        <div class="elemento">
-            <label for="foto">Foto:</label> 
-            <input name="foto" type="file" />
-        </div>
-        <div class="elemento">
-            <input type="submit" value="Reportar Mascota">
-        </div>
+        } ?>       
+            
+            <div class="elemento">
+                Nombre: <br>
+                <input id="nombre" type="text" name="nombre">
+            </div>
+            <div class="elemento">
+                Raza:<br>
+                <input id="raza" type="text" name="raza">
+            </div>
+            <div class="elemento">
+                Color:<br>
+                <input id="color" type="text" name="color">
+            </div>
+            <div class="elemento">
+                Tamaño:<br>
+                <input id="tamano" type="text" name="tamano">             
+            </div>
+            <div class="elemento">
+                <label for="foto">Foto:</label> 
+                <input name="foto" type="file" />
+            </div>
+            <div class="elemento elemento_ultimo">
+                <input type="submit" value="Reportar Mascota">
+            </div>
+        
 
     </form>
 </div>

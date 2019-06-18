@@ -2,6 +2,7 @@ h2{
     color:white;
 }
 table {
+   
     width: 100%;
     border: 1px solid #000;
  }
@@ -38,4 +39,17 @@ button{
    margin: 2rem auto;
    width: 40rem;
 }
-   
+input{
+   border-radius: 8px;
+   background-color: #a8c2d5;
+   border:0;
+   padding: 10px;    
+   font-family: 'Indie Flower', cursive;
+   width: 15rem;
+   height: 2rem;
+}
+.tabla_taller{
+   margin-top: 3rem;
+
+}
+

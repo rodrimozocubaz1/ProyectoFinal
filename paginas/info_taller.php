@@ -55,70 +55,76 @@ if(isset($_GET["t"])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><?php echo $nom ?></title>
+    <link rel="stylesheet" href="../estilos/estilonosotros.css">
+    <link rel="stylesheet" href="../estilos/estilos_tabla.css">
 </head>
 <body>
     <?php include ('../Funciones/cabecera_resto.php') ?>
-    <h2><?php echo $nom ?></h2>
+        <div class="contenido_taller">
+            <h2><?php echo $nom ?></h2>
 
-    <form action="../Funciones/procesar_talleres.php" method="post">
-    <input type="hidden" name="id_u" value=<?php echo $_SESSION["id"] ?>> <!-- enviar el id del usuario  -->
-    <input type="hidden" name="id_t" value=<?php echo $id ?>> <!-- enviar el id del taller  -->
-    <?php 
-    #boton inscribirse si hay cupos y si no esta inscrito
-    if(count($filas3)==0){ ?>
-    <button type="submit" name="i">Inscribirse</button>
-    <?php } ?>
-    <?php 
-    #boton cancelar si ya esta inscrito
-    if(count($filas3)==1){ ?>
-    <button type="submit" name="c">Cancelar Inscripción</button>
-    <?php } ?>
-    <button type="submit" name="b">Regresar a Lista Talleres</button>
-    </form>
-    <div>
-    <p>Nombre Taller:</p>
-    <p><?php echo $nom ?></p>
+            <form action="../Funciones/procesar_talleres.php" method="post">
+            <input type="hidden" name="id_u" value=<?php echo $_SESSION["id"] ?>> <!-- enviar el id del usuario  -->
+            <input type="hidden" name="id_t" value=<?php echo $id ?>> <!-- enviar el id del taller  -->
+            <?php 
+            #boton inscribirse si hay cupos y si no esta inscrito
+            if(count($filas3)==0){ ?>
+                <div class="botones">
+                <button type="submit" name="i">Inscribirse</button>
+            <?php } ?>
+            <?php 
+            #boton cancelar si ya esta inscrito
+            if(count($filas3)==1){ ?>
+            <button type="submit" name="c">Cancelar Inscripción</button>
+            <?php } ?>
+                
+                <button type="submit" name="b">Regresar a Lista Talleres</button>
+                </div>
+            </form>
+            <div>
+                <p>Nombre Taller:</p>
+                <p><?php echo $nom ?></p>
+            </div>
+            <div>
+                <p>Descripción:</p>
+                <p><?php echo $filas[0][$desc_taller] ?></p>
+            </div>
+            <div>
+                <p>Fecha:</p>
+                <p><?php echo $filas[0][$fecha_taller] ?></p>
+            </div>
+            <div>
+                <p>Hora:</p>
+                <p><?php echo $filas[0][$hora_taller] ?></p>
+            </div>
+            <div>
+                <p>Cupos restantes:</p>
+                <p><?php echo $disponible ?></p>
+            </div>
+            <div>
+                <p>Lista Inscritos</p>
+                <table class="tabla_taller">
+                <tr>
+                    <td>Nombres</td>
+                    <td>Apellidos</td>
+                </tr>
+                <?php
+                    for ($i=0; $i < count($filas2); $i++) { 
+                        $u=$filas2[$i][$idUsu_taller_usuario];
+                        $sql4="SELECT * FROM $tab_usuario WHERE $id_usuario='$u'";
+                        $r=$pdo->query($sql4);
+                        $f=$r->fetch();
+                        ?>
+                        <tr>
+                            <td><?php echo $f[$nom_usuario] ?></td>
+                            <td><?php echo $f[$ape_usuario] ?></td>                
+                        </tr>
+                        <?php
+                    }
+                ?>
+                </table>
+        </div>
     </div>
-    <div>
-    <p>Descripción:</p>
-    <p><?php echo $filas[0][$desc_taller] ?></p>
-    </div>
-    <div>
-    <p>Fecha:</p>
-    <p><?php echo $filas[0][$fecha_taller] ?></p>
-    </div>
-    <div>
-    <p>Hora:</p>
-    <p><?php echo $filas[0][$hora_taller] ?></p>
-    </div>
-    <div>
-    <p>Cupos restantes:</p>
-    <p><?php echo $disponible ?></p>
-    </div>
-    <div>
-    <p>Lista Inscritos</p>
-    <table>
-    <tr>
-        <td>Nombres</td>
-        <td>Apellidos</td>
-    </tr>
-    <?php
-        for ($i=0; $i < count($filas2); $i++) { 
-            $u=$filas2[$i][$idUsu_taller_usuario];
-            $sql4="SELECT * FROM $tab_usuario WHERE $id_usuario='$u'";
-            $r=$pdo->query($sql4);
-            $f=$r->fetch();
-            ?>
-            <tr>
-                <td><?php echo $f[$nom_usuario] ?></td>
-                <td><?php echo $f[$ape_usuario] ?></td>                
-            </tr>
-            <?php
-        }
-    ?>
-    </table>
-    </div>
-
     <?php include ('../Funciones/footer_resto.php') ?>
 </body>
 </html>
