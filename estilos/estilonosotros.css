@@ -116,8 +116,10 @@ p{
     
 }
 .contenido_somos{
+    background-image: url('../Imagenes/somos.jpg');
+    color: #0dc7bf;
+    font-size:3rem;
     
-    background-image: url('../Imagenes/perritos_nosotros.jpg');
     
 }
 
