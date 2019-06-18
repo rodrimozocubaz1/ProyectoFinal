@@ -6,9 +6,10 @@ table {
     width: 100%;
     border: 1px solid #000;
  }
+ 
  th, td {
-    width: 25%;
-    text-align: left;
+    
+    text-align: center;
     vertical-align: top;
     border: 1px solid #000;
     border-collapse: collapse;
@@ -57,8 +58,12 @@ input{
    height: 2rem;
 }
 .tabla_taller{
-   margin-top: 3rem;
+   margin-top:3rem;
+   
 }
-.contenido_usuario{
-   padding-bottom: 40rem;
+.imagen_perro{
+   width:100px;
+}
+.tabla{
+   background: #1E8AD9;
 }

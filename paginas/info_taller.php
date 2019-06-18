@@ -69,7 +69,7 @@ if(isset($_GET["t"])){
             <?php 
             #boton inscribirse si hay cupos y si no esta inscrito
             if(count($filas3)==0){ ?>
-                <div class="botones">
+                
                 <button type="submit" name="i">Inscribirse</button>
             <?php } ?>
             <?php 
@@ -79,7 +79,7 @@ if(isset($_GET["t"])){
             <?php } ?>
                 
                 <button type="submit" name="b">Regresar a Lista Talleres</button>
-                </div>
+                
             </form>
             <div>
                 <p>Nombre Taller:</p>

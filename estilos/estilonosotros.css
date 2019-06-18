@@ -142,13 +142,18 @@ p{
 }
 .contenido_usuario{
     background-image: url('../Imagenes/degradado.jpg');
+    
 }
 .contenido_taller{
     background-image: url('../Imagenes/perro_taller.jpg');
     color: white;
 }
+.contenido_infvacunacion{
+    background-image: url('../Imagenes/infovacuna.jpg');
+    color:white;
+}
 .contenedor-vacunacion,.contenido_talleres,.contenido-adopcion,.contenido_somos,.contenido-reportar
-,.contenido_usuario,.contenido_taller{
+,.contenido_usuario,.contenido_infvacunacion, .contenido_taller{
     padding-top:13rem;
     padding-bottom: 9rem;
     height:100vh;    
