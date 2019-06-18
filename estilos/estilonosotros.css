@@ -113,6 +113,9 @@ p{
     padding-top:13rem;
     padding-bottom: 9rem;
     height:100vh;
+    background-image: url('../Imagenes/perrito_talleres.jpg');
+    background-position: center center;
+    background-size: cover;
 }
 .contenedor_maps{
     margin: 0rem 37rem;    

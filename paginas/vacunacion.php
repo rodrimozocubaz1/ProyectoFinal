@@ -22,7 +22,7 @@ $sql="SELECT * FROM $tab_vacunas ORDER BY $id_vacunas ASC";
     <title>Campañas de Vacunación</title>
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../estilos/estilonosotros.css">  
-    <link rel="stylesheet" href="../estilos/estilos_vacunacion.css">     
+    <link rel="stylesheet" href="../estilos/estilos_tabla.css">     
 
 </head>
 <body>
