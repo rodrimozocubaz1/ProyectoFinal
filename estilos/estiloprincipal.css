@@ -73,3 +73,6 @@ h1{
 .img_ayudamos, .ayudamos_texto{
     flex-basis: calc(50% - 1rem);
 }
+section{
+    margin-top: 2rem;
+ }
