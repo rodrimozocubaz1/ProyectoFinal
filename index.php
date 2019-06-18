@@ -26,6 +26,10 @@ include ('Funciones/verificar_session.php');
                 <p>Nos encargamos de buscar un hogar a los animales domésticos que han sido encontrados perdidos o 
                 abandonados, dandoles asi una oportunidad para poder volver a reintegrarse a una familia
                 que pueda darles el amor y cariño que merecen.</p>
+                <p>Adopta, cambia una vida y suma felicidad a la tuya. En TuPET puedes encontrar a tu mascota ideal!</p>
+                <p>El sueño es incrementar el número de adopciones en Lima, a través de un espacio virtual que centralice las oportunidades de adopción, brindando además asesoría integral a los adoptantes y trabajando en coordinación con una red de albergues.  :')</p>
+                <h3>Que saber antes de adoptar...</h3>
+                <p>Incorporar una mascota en tu vida es un hecho importante que va a modificar tu día a día durante muchos años, por lo es imprescindible que actúes con responsabilidad, y sospeses la idea teniendo muy en cuenta los pros y los contras. Piensa que, la mayoría de las mascotas que son abandonados y acogidos por refugios o protectoras, son fruto de una decisión impulsiva y poco meditada por parte de sus propietarios, que ven alterada su vida cuando ya es demasiado tarde.</p>
             </div>
         </div>
     </main>
