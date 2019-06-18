@@ -97,8 +97,12 @@ p{
 
 .contenido_contactar{
     padding-top:13rem;
-    padding-bottom: 9rem;
+    padding-bottom: 25rem;
     height:100vh;
+    
+    background-image: url('../Imagenes/perrito_lentes.jpg');
+    background-position: center center;
+    background-size: cover;
 }
 .contenido-adopcion{
     padding-top:13rem;
@@ -123,4 +127,10 @@ p{
     font-family: 'Indie Flower', cursive;
     color:white;
     border-radius: 20px; 
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.boton_face{
+    margin: 0 auto;
+    width:30rem;
 }
