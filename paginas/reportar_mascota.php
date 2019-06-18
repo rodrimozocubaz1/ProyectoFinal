@@ -47,7 +47,7 @@ include ("../Funciones/verificar_session.php");
                 <input name="foto" type="file" />
             </div>
             <div class="elemento elemento_ultimo">
-                <input type="submit" value="Reportar Mascota">
+                <button type="submit" value="Reportar Mascota">
             </div>
         
 
