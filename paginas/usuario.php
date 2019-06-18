@@ -49,7 +49,8 @@ $sql="SELECT * FROM $tab_mascota WHERE $due_mascota='$id_u'";
                 <label for="">Dirección:</label><br>
                 <input type="text" name="d" value="<?php echo $_SESSION["direccion"] ?>">
             </div>
-            <div><label for="">Fecha de Nacimiento:</label><br>       
+            <div><label for="">Fecha de Nacimiento:</label><br> 
+            <input type="date" name="f" value="<?php echo $_SESSION["fecha_nac"] ?>">      
             </div>
             <div class="botones_usuario">
                 <button type="submit" class="botones">Guardar Cambios</button>
