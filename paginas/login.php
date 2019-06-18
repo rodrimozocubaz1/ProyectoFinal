@@ -39,7 +39,7 @@ if(isset($_SESSION["id"])){
                     </div>
                     <div class="elemento">
                     Contraseña:<br>
-                    <input type="text" name="p" id="" placeholder="contraseña" required>
+                    <input type="password" name="p" id="" placeholder="contraseña" required>
                     </div>
                     <div class="elemento iniciada">
                     <input type="checkbox" name="s" value="1">
